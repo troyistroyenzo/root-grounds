@@ -1,7 +1,7 @@
-
 "use client"
+
 import * as THREE from 'three'
-import { useRef, useState } from 'react'
+import { useRef, useState, useEffect } from 'react'
 import { easing } from 'maath'
 import { Canvas, useFrame } from '@react-three/fiber'
 import {
@@ -30,12 +30,18 @@ const innerMaterial = new THREE.MeshStandardMaterial({
 
 export default function App() {
   const [perfSucks, degrade] = useState(false)
+  
+  useEffect(() => {
+    // Check if document is defined (browser environment)
+    if (typeof document !== 'undefined') {
+      // Access document and perform necessary operations here
+    }
+  }, [])
+  
   return (
     <Canvas
       shadows
       dpr={[1, perfSucks ? 1.5 : 2]}
-      eventSource={document.getElementById('root')}
-      eventPrefix="client"
       camera={{ position: [100, 100, 300], fov: 50 }}>
       {/** PerfMon will detect performance issues */}
       <PerformanceMonitor onDecline={() => degrade(false)} />
@@ -66,6 +72,7 @@ function Scene(props) {
     </group>
   )
 }
+
 function Env({ perfSucks }) {
   const ref = useRef()
 

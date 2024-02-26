@@ -5,7 +5,7 @@ import Overlay from "@/components/Overlay"
 export default function Home() {
   return (
     <>
-    {/* <Background/> */}
+    <Background/>
     <Overlay/>
     </>
   );
