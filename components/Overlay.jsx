@@ -25,7 +25,7 @@ const Overlay = () => {
         <br />
         <br />
         <div style={{ position: 'relative', marginTop: 10, display: 'inline-block' }}>
-          <a style={{ fontSize: '15px', fontWeight: 600, letterSpacing: 2 }} href="https://github.com/pmndrs/drei#caustics">
+          <a style={{ fontSize: '15px', fontWeight: 600, letterSpacing: 2 }} href="https://yatjbdeqemy.typeform.com/to/UXA4BJjU">
             ORDER NOW
           </a>
           <div style={{ marginTop: 6, height: 2.5, width: '100%', background: '#3e3e3d' }} />

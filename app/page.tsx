@@ -4,6 +4,7 @@ import Overlay from "@/components/Overlay"
 import Features from "@/components/Features"
 import Products from "@/components/Products"
 import About from "@/components/About"
+import Footer from "@/components/Footer"
 
 export default function Home() {
   return (
@@ -11,7 +12,7 @@ export default function Home() {
     <Background/>
     <Overlay/>
     <About/>
-    <Features/>
+    {/* <Features/> */}
     <Products/>
     </>
   );

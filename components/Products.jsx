@@ -14,22 +14,67 @@ import {
 import { CheckIcon } from '@chakra-ui/icons'
 
 // Replace test data with your own
-const features = Array.apply(null, Array(8)).map(function (x, i) {
-  return {
-    id: i,
-    title: 'Lorem ipsum dolor sit amet',
-    text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam.',
-  }
-})
+const features = [
+    {
+      id: 1,
+      bean: 'Brazil Santos',
+      profile: 'Chocolate Aroma, Smooth Body, Mild Acidity, Bakers Chocolate',
+    },
+    {
+      id: 2,
+      bean: 'Brazil Dutra',
+      profile: 'Caramel Aroma, Citrus Acidity, Syrupy Body, Chocolate Flavor & Finish',
+    },
+    {
+      id: 3,
+      bean: 'Brazil Cerrado',
+      profile: 'Dark Chocolate, Citrus Acidity, Syrupy Body, Chocolate Flavor & Woody Finish',
+    },
+    {
+      id: 4,
+      bean: 'Guatemala Huehuetenango',
+      profile: 'Orange Aroma, Smooth Body, Mild Acidity, Orange Notes',
+    },
+    {
+      id: 5,
+      bean: 'Colombia',
+      profile: 'Sweet and Nutty Aroma, Mild Acidity, Chocolate Finish, Nutty Aftertaste',
+    },
+    {
+      id: 6,
+      bean: 'El Salvador',
+      profile: 'Caramel Aroma, Grapefruit citrus Acidity, Caramel and Dark Chocolate Notes',
+    },
+    {
+      id: 7,
+      bean: 'Ethiopia Sidamo',
+      profile: 'Jasmine Flower Aroma, Juicy Body, Lemon Acidity, Clean Finish',
+    },
+    {
+      id: 8,
+      bean: 'Ethiopia Masha',
+      profile: 'Fruity Aroma, Bright Acidity, Berries Flavor, Chocolate Finish',
+    },
+    {
+      id: 9,
+      bean: 'Burundi Lampibo',
+      profile: 'Slick Body, Dense Citrus Acidity, GrapeFruit and Peach Sweetness',
+    },
+    {
+      id: 10,
+      bean: 'Vietnam',
+      profile: 'Burnt Wood and Nutty Aroma, Mild Acidity, Medium Body, Nutty and Wood Notes w hint of Cacao Nibs',
+    },
+  ];
+  
 
 export default function GridListWithHeading() {
   return (
     <Box p={4}>
       <Stack spacing={4} as={Container} maxW={'3xl'} textAlign={'center'}>
-        <Heading fontSize={'3xl'}>This is the headline</Heading>
+        <Heading fontSize={'3xl'}>Whole Beans ☕</Heading>
         <Text color={'gray.600'} fontSize={'xl'}>
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-          tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+          Here are some of our offerings
         </Text>
       </Stack>
 
@@ -41,8 +86,8 @@ export default function GridListWithHeading() {
                 <Icon as={CheckIcon} />
               </Box>
               <VStack align={'start'}>
-                <Text fontWeight={600}>{feature.title}</Text>
-                <Text color={'gray.600'}>{feature.text}</Text>
+                <Text fontWeight={600}>{feature.bean}</Text>
+                <Text color={'gray.600'}>{feature.profile}</Text>
               </VStack>
             </HStack>
           ))}

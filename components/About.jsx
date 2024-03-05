@@ -27,7 +27,7 @@ const Feature = ({ text, icon, iconBg }) => {
 
 export default function SplitWithImage() {
   return (
-    <Container maxW={'5xl'} py={12}>
+    <Container maxW={'5xl'} py={250}>
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
         <Stack spacing={4}>
           {/* <Text
@@ -45,7 +45,7 @@ export default function SplitWithImage() {
           <Text color={'gray.500'} fontSize={'lg'}>
           We are dedicated to bringing healthier and quality produce to people in the local space. 
           </Text>
-          <Stack
+          {/* <Stack
             spacing={4}
             divider={
               <StackDivider borderColor={useColorModeValue('gray.100', 'gray.700')} />
@@ -65,7 +65,7 @@ export default function SplitWithImage() {
               iconBg={useColorModeValue('purple.100', 'purple.900')}
               text={'Market Analysis'}
             />
-          </Stack>
+          </Stack> */}
         </Stack>
         <Flex>
           <Image
