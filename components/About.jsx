@@ -27,7 +27,7 @@ const Feature = ({ text, icon, iconBg }) => {
 
 export default function SplitWithImage() {
   return (
-    <Container maxW={'5xl'} py={250}>
+    <Container maxW={'lg'} py={250}>
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
         <Stack spacing={4}>
           {/* <Text
@@ -41,9 +41,9 @@ export default function SplitWithImage() {
             rounded={'md'}>
             About Us
           </Text> */}
-          <Heading fontFamily={'inter'} >About</Heading>
-          <Text color={'gray.500'} fontSize={'lg'}>
-          We are dedicated to bringing healthier and quality produce to people in the local space. 
+          <Heading color={'black'} fontSize={'xl'} fontFamily={'inter'} >What is Root & Ground?</Heading>
+          <Text color={'black.900'} fontSize={'lg'} fontWeight={'700'}>
+          Simple, we are an online coffee bean supplier. We want to bring fresh and delicious coffee produce right to your table.
           </Text>
           {/* <Stack
             spacing={4}
@@ -72,7 +72,7 @@ export default function SplitWithImage() {
             rounded={'md'}
             alt={'feature image'}
             src={
-              'https://images.unsplash.com/photo-1554200876-56c2f25224fa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'
+              'https://images.unsplash.com/photo-1447933601403-0c6688de566e?q=80&w=1361&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
             }
             objectFit={'cover'}
           />
