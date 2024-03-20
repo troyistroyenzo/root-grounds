@@ -103,7 +103,7 @@ function Env({ perfSucks }) {
         ))}
       </group>
       <group ref={ref}>
-        <Lightformer intensity={5} form="ring" color="white" rotation-y={Math.PI / 2} position={[-5, 2, -1]} scale={[10, 10, 1]} />
+        <Lightformer intensity={5} form="ring" color="#F3F3F3" rotation-y={Math.PI / 2} position={[-5, 2, -1]} scale={[10, 10, 1]} />
       </group>
     </Environment>
   )

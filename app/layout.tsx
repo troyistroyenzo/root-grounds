@@ -4,6 +4,7 @@ import { ThemeProvider, ColorModeProvider } from "@chakra-ui/react"
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/Footer"
+import Head from 'next/head';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,6 +20,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Head>
+        <link rel="shortcut icon" href="/favicon.ico" />
+        {/* Add any other meta tags or links here */}
+      </Head>
       <body className={inter.className}>
         <ChakraProvider>
           {children}

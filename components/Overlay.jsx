@@ -21,10 +21,10 @@ const Overlay = () => {
         
         <Image src={Logo} alt="Logo" />
       </div>
-      <div style={{ position: 'absolute', bottom: 120, left: 120, fontSize: '18px', fontWeight: 600, color: '#3F754A'  }}>
-        fresh coffee produce
+      <div style={{ position: 'absolute', bottom: 120, left: 120, fontSize: '18px', fontWeight: 600, color: '#00897B'  }}>
+        Fresh coffee beans
         <br />
-        from farm to table.
+        and more.
         <br />
         <br />
         <div style={{ position: 'relative', marginTop: 10, display: 'inline-block' }}>
