@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import Logo from '../assets/logo.svg';
+import Logo from '../assets/greenlogo.svg';
 
 const Overlay = () => {
   const logoUrl = `data:image/svg+xml;base64,${btoa(unescape(encodeURIComponent(Logo)))}`;
