@@ -4,8 +4,18 @@
 
 @import url('https://rsms.me/inter/inter.css');
 
+@font-face {
+  font-family: 'Inter';
+  src: url(../assets/fonts/Inter-Regular.ttf);
+  /* Add additional src lines for different font file formats, if necessary */
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 * {
   box-sizing: border-box;
+  font-family: 'Inter';
 }
 
 html,

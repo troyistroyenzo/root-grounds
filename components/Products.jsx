@@ -10,6 +10,8 @@ import {
   Stack,
   HStack,
   VStack,
+  Flex,
+  Image
 } from '@chakra-ui/react'
 import { CheckCircleIcon, CheckIcon } from '@chakra-ui/icons'
 import { CiCircleAlert, CiCoffeeBean } from 'react-icons/ci';
@@ -87,21 +89,35 @@ export default function GridListWithHeading() {
       <Stack spacing={4} as={Container} maxW={'3xl'} textAlign={'center'}>
         <Heading fontSize={'3xl'} color={'black'} fontWeight={900} fontFamily={'Inter'}>Whole Beans </Heading>
         <Text color={'black'} fontWeight={500} fontFamily={'Inter'} fontSize={'xl'}>
-          Here are some of the single origin flavors we got for you 👀
+          Here are some of the flavors we got for you 👀
         </Text>
       </Stack>
-
+      <Flex>
+          <Image
+            rounded={'md'}
+            alt={'feature image'}
+            src={
+              'https://res.cloudinary.com/dlgyqy69b/image/upload/v1712558819/DALL_E_2024-04-08_14.46.13_-_Create_a_panoramic_image_featuring_a_series_of_specialty_and_single_origin_coffee_beans_each_from_a_different_country._Each_bean_is_visually_represen_myw1nf.webp'
+            }
+            objectFit={'cover'}
+          />
+        </Flex>
       <Container  fontFamily={'Inter'} maxW={'6xl'} mt={10}>
         <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} spacing={10}>
           {features.map((feature) => (
-            <HStack key={feature.id} align={'top'}>
+            <HStack key={feature.id} align={'left'}>
+               
               <Box color={feature.color} px={2}>
                 <Icon as={GiCoffeeBeans} w={'100%'} />
               </Box>
-              <VStack align={'start'}>
+              <VStack align={'left'}>
+                
                 <Text fontWeight={800} fontSize={'2xl'}>{feature.bean}</Text>
+                
                 <Text color={'black'}>{feature.profile}</Text>
+                
               </VStack>
+              
             </HStack>
           ))}
         </SimpleGrid>
