@@ -41,9 +41,9 @@ export default function SplitWithImage() {
             rounded={'md'}>
             About Us
           </Text> */}
-          <Heading color={'black'} fontSize={'xl'} fontFamily={'inter'} >What is Root & Ground?</Heading>
-          <Text color={'black.900'} fontSize={'lg'} fontWeight={'700'}>
-          Simple, we are an online coffee bean supplier. We want to bring fresh and delicious coffee produce right to your table.
+          <Heading color={'black'} fontSize={'4xl'} fontFamily={'inter'} >What is Root & Ground?</Heading>
+          <Text color={'black.900'} fontSize={'md'} fontWeight={'500'}>
+          Delivering top-tier Specialty and Single Origin Coffee Beans directly to your doorstep. Taste the quality and uniqueness with every sip.
           </Text>
           {/* <Stack
             spacing={4}
@@ -72,7 +72,7 @@ export default function SplitWithImage() {
             rounded={'md'}
             alt={'feature image'}
             src={
-              'https://images.unsplash.com/photo-1447933601403-0c6688de566e?q=80&w=1361&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+              'https://res.cloudinary.com/dlgyqy69b/image/upload/v1712555468/FINAL_RENDER_j6faxc.png'
             }
             objectFit={'cover'}
           />

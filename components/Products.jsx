@@ -85,13 +85,13 @@ export default function GridListWithHeading() {
   return (
     <Box p={4}>
       <Stack spacing={4} as={Container} maxW={'3xl'} textAlign={'center'}>
-        <Heading fontSize={'3xl'}>Whole Beans ☕</Heading>
-        <Text color={'gray.600'} fontSize={'xl'}>
-          Here are some of our offerings
+        <Heading fontSize={'3xl'} color={'black'} fontWeight={900} fontFamily={'Inter'}>Whole Beans </Heading>
+        <Text color={'black'} fontWeight={500} fontFamily={'Inter'} fontSize={'xl'}>
+          Here are some of the single origin flavors we got for you 👀
         </Text>
       </Stack>
 
-      <Container maxW={'6xl'} mt={10}>
+      <Container  fontFamily={'Inter'} maxW={'6xl'} mt={10}>
         <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} spacing={10}>
           {features.map((feature) => (
             <HStack key={feature.id} align={'top'}>
@@ -99,8 +99,8 @@ export default function GridListWithHeading() {
                 <Icon as={GiCoffeeBeans} w={'100%'} />
               </Box>
               <VStack align={'start'}>
-                <Text fontWeight={600}>{feature.bean}</Text>
-                <Text color={'gray.600'}>{feature.profile}</Text>
+                <Text fontWeight={800} fontSize={'2xl'}>{feature.bean}</Text>
+                <Text color={'black'}>{feature.profile}</Text>
               </VStack>
             </HStack>
           ))}

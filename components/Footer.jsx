@@ -46,21 +46,16 @@ export default function SmallWithSocial() {
       color={useColorModeValue('gray.700', 'gray.200')}>
       <Container
         as={Stack}
+        fontFamily={'Inter'}
         maxW={'6xl'}
         py={4}
         direction={{ base: 'column', md: 'row' }}
         spacing={4}
         justify={{ base: 'center', md: 'space-between' }}
         align={{ base: 'center', md: 'center' }}>
-        <Text>© 2024 R&G Co Ltd. All rights reserved</Text>
+        <Text>© 2024 R&G Co. All rights reserved</Text>
         <Stack direction={'row'} spacing={6}>
-          <SocialButton label={'Twitter'} href={'#'}>
-            <FaTwitter />
-          </SocialButton>
-          <SocialButton label={'YouTube'} href={'#'}>
-            <FaYoutube />
-          </SocialButton>
-          <SocialButton label={'Instagram'} href={'#'}>
+          <SocialButton label={'Instagram'} href={'https://www.instagram.com/rootandgrounds/'}>
             <FaInstagram />
           </SocialButton>
         </Stack>
