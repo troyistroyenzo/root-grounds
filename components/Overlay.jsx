@@ -28,8 +28,8 @@ const Overlay = () => {
         <br />
         <br />
         <div style={{ position: 'relative', marginTop: 10, display: 'inline-block' }}>
-          <a style={{ fontSize: '25px', fontWeight: 900, letterSpacing: 2 }} href="https://yatjbdeqemy.typeform.com/to/UXA4BJjU">
-            ORDER NOW
+          <a style={{ fontSize: '25px', fontWeight: 900, letterSpacing: 2 }} href=""> 
+            ORDER NOW (COMING SOON)
           </a>
           <div style={{ marginTop: 6, height: 2.5, width: '100%', background: '#3e3e3d' }} />
         </div>
@@ -39,4 +39,5 @@ const Overlay = () => {
   );
 }
 
+// https://yatjbdeqemy.typeform.com/to/UXA4BJjU
 export default Overlay;
