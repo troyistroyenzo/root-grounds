@@ -87,7 +87,7 @@ export default function GridListWithHeading() {
   return (
     <Box p={4}>
       <Stack spacing={4} as={Container} maxW={'3xl'} textAlign={'center'}>
-        <Heading fontSize={'3xl'} color={'black'} fontWeight={900} fontFamily={'Inter'}>Whole Beans </Heading>
+        <Heading fontSize={'3xl'} color={'black'} fontWeight={900} fontFamily={'Inter'}>Product Offerings</Heading>
         <Text color={'black'} fontWeight={500} fontFamily={'Inter'} fontSize={'xl'}>
           Here are some of the flavors we got for you 👀
         </Text>

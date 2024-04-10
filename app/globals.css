@@ -12,6 +12,12 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Bowlby';
+  src: url(../assets/fonts/BowlbyOne-Regular.ttf);
+  font-weight: 600;
+}
+
 
 * {
   box-sizing: border-box;
