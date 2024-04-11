@@ -7,13 +7,13 @@ const Overlay = () => {
 
   return (
     <>
-      <div className="char"  style={{ top: 50, left: 20, color: '#754A3F', fontSize:'40px', fontFamily: 'Bowlby'}}>
+      <div className="char"  style={{ top: 50, left: 20, color: '#9C3300', fontSize:'40px', fontFamily: 'Bowlby'}}>
        PRODUCED
       </div>
       <div className="char" style={{ top: '20vw', left: '20vw', color: '#25130F', fontFamily: 'Bowlby'}}>
         <br />FROM
       </div>
-      <div className="char" style={{ bottom: 40, left: '10vw', color: '#754A3F', fontFamily: 'Bowlby'}}>
+      <div className="char" style={{ bottom: 40, left: '10vw', color: '#9C3300', fontFamily: 'Bowlby'}}>
         THE
       </div>
       <div className="char" style={{ bottom: 40, left: '40vw', fontFamily: 'Bowlby' }}>EARTH.</div>
