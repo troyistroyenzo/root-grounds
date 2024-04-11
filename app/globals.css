@@ -13,6 +13,15 @@
 }
 
 @font-face {
+  font-family: 'Inter-Bold';
+  src: url(../assets/fonts/Inter-Bold.ttf);
+  /* Add additional src lines for different font file formats, if necessary */
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
   font-family: 'Bowlby';
   src: url(../assets/fonts/BowlbyOne-Regular.ttf);
   font-weight: 600;

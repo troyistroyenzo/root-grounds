@@ -31,8 +31,8 @@ export default function SplitWithImage() {
     <Container maxW={'lg'} py={250}>
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
         <Stack spacing={4}>
-          <Heading color={'black'} fontSize={'4xl'} fontFamily={'inter'} >What is Root & Grounds?</Heading>
-          <Text color={'black.900'} fontSize={'md'} fontWeight={'600'}>
+          <Heading color={'black'} fontSize={'4xl'} fontFamily={'Inter-Bold'} >What is Root & Grounds?</Heading>
+          <Text color={'black.900'} fontSize={'md'}>
           We are an online shop aimed at delivering top-tier natural foods to your door step.
           </Text>
           <Stack
@@ -68,8 +68,8 @@ export default function SplitWithImage() {
           />
         </Flex>
         <Stack spacing={4}>
-          <Heading color={'black'} fontSize={'4xl'} fontFamily={'inter'} >What are your prices?</Heading>
-          <Text color={'black.900'} fontSize={'md'} fontWeight={'600'}>
+          <Heading color={'black'} fontSize={'4xl'} fontFamily={'Inter-Bold'} >What are your prices?</Heading>
+          <Text color={'black.900'} fontSize={'md'}>
           We source our products from different suppliers but ensure consistency in our produce.
           </Text>
           <Stack
