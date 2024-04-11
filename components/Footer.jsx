@@ -9,7 +9,7 @@ import {
   useColorModeValue,
   VisuallyHidden,
 } from '@chakra-ui/react'
-import { FaInstagram, FaTwitter, FaYoutube, FaFacebook} from 'react-icons/fa'
+import { FaInstagram, FaTwitter, FaYoutube, FaFacebook, FaTiktok} from 'react-icons/fa'
 import { ReactNode } from 'react'
 
 const SocialButton = ({
@@ -61,7 +61,11 @@ export default function SmallWithSocial() {
           <SocialButton label={'Facebook'} href={'https://facebook.com/rootandgrounds'}>
             <FaFacebook/>
           </SocialButton>
+          <SocialButton label={'Facebook'} href={'https://www.tiktok.com/@rootandgrounds?_t=8lQx9czUXVi&_r=1'}>
+            <FaTiktok/>
+          </SocialButton>
         </Stack>
+       
       </Container>
     </Box>
   )

@@ -33,7 +33,7 @@ export default function SplitWithImage() {
         <Stack spacing={4}>
           <Heading color={'black'} fontSize={'4xl'} fontFamily={'inter'} >What is Root & Grounds?</Heading>
           <Text color={'black.900'} fontSize={'md'} fontWeight={'600'}>
-          We are an online shop aimed at delivering top-tier Specialty and Single Origin Coffee Beans directly to your doorstep.
+          We are an online shop aimed at delivering top-tier natural foods to your door step.
           </Text>
           <Stack
             spacing={4}
@@ -43,17 +43,17 @@ export default function SplitWithImage() {
             <Feature
             
               iconBg={useColorModeValue('yellow.100', 'yellow.900')}
-              text={'Freshly Roasted Beans'}
+              text={'Freshly Roasted Single Origin Beans'}
             />
             <Feature
               
               iconBg={useColorModeValue('green.100', 'green.900')}
-              text={'Speciality & Single Origin Beans'}
+              text={'Honey, Raw Milk, Raw Cheese (Coming Soon)'}
             />
             <Feature
 
               iconBg={useColorModeValue('purple.100', 'purple.900')}
-              text={'High Quality Beans'}
+              text={'Fresh fruits and greens (Coming soon)'}
             />
           </Stack>
         </Stack>
@@ -70,7 +70,7 @@ export default function SplitWithImage() {
         <Stack spacing={4}>
           <Heading color={'black'} fontSize={'4xl'} fontFamily={'inter'} >What are your prices?</Heading>
           <Text color={'black.900'} fontSize={'md'} fontWeight={'600'}>
-          We source our beans from different suppliers but ensure consistency in our beans.
+          We source our products from different suppliers but ensure consistency in our produce.
           </Text>
           <Stack
             spacing={4}
@@ -80,7 +80,7 @@ export default function SplitWithImage() {
             <a href='https://docs.google.com/document/d/1FED8tGpTMxd8k2zyBdKQADlN7tcXGLSXJJ_pIduu2Qs/edit?usp=sharing' target='_blank'>
             <Feature
               iconBg={useColorModeValue('yellow.100', 'yellow.900')}
-              text={'Click Here to View Pricelist'}
+              text={'Click Here to View Coffee Pricelist'}
             />
             </a>
           </Stack>
