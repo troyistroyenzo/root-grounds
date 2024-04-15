@@ -33,28 +33,34 @@ export default function SplitWithImage() {
         <Stack spacing={4}>
           <Heading color={'black'} fontSize={'4xl'} fontFamily={'Inter-Bold'} >What is Root & Grounds?</Heading>
           <Text color={'black.900'} fontSize={'md'}>
-          We are an online shop aimed at delivering top-tier natural foods to your door step.
+          We deliver premium natural foods directly to your doorstep. We're doing coffee first then maybe other food like sourdough, raw honey, and many other hard-to-find foods 👀
           </Text>
           <Stack
             spacing={4}
             divider={
               <StackDivider borderColor={useColorModeValue('gray.100', 'gray.700')} />
             }>
-            <Feature
-            
-              iconBg={useColorModeValue('yellow.100', 'yellow.900')}
-              text={'Freshly Roasted Single Origin Beans'}
-            />
-            <Feature
-              
-              iconBg={useColorModeValue('green.100', 'green.900')}
-              text={'Honey, Raw Milk, Raw Cheese (Coming Soon)'}
-            />
-            <Feature
-
-              iconBg={useColorModeValue('purple.100', 'purple.900')}
-              text={'Fresh fruits and greens (Coming soon)'}
-            />
+              <a href='https://drive.google.com/file/d/11tmzYn698LLBoGX2eZONzz0TuAH2QiQJ/view?usp=sharing' target='_blank'>
+              <Feature
+                iconBg={useColorModeValue('yellow.900', 'brown.900')}
+                icon={FaInstagram}
+                text={'Coffee Beans Price List'}
+              />
+              </a>
+              <a href='https://www.facebook.com/rootandgrounds/' target='_blank'>
+              <Feature
+                iconBg={useColorModeValue('blue.400', 'blue.900')}
+                icon={FaInstagram}
+                text={'Facebook Page'}
+              />
+              </a>
+              <a href='https://www.instagram.com/rootandgrounds/' target='_blank'>
+              <Feature
+                iconBg={useColorModeValue('purple.700', 'blue.900')}
+                icon={FaInstagram}
+                text={'Instagram Page'}
+              />
+              </a>
           </Stack>
         </Stack>
         <Flex>
@@ -62,35 +68,7 @@ export default function SplitWithImage() {
             rounded={'md'}
             alt={'feature image'}
             src={
-              'https://res.cloudinary.com/dlgyqy69b/image/upload/v1712555468/FINAL_RENDER_j6faxc.png'
-            }
-            objectFit={'cover'}
-          />
-        </Flex>
-        <Stack spacing={4}>
-          <Heading color={'black'} fontSize={'4xl'} fontFamily={'Inter-Bold'} >What are your prices?</Heading>
-          <Text color={'black.900'} fontSize={'md'}>
-          We source our products from different suppliers but ensure consistency in our produce.
-          </Text>
-          <Stack
-            spacing={4}
-            divider={
-              <StackDivider borderColor={useColorModeValue('gray.100', 'gray.700')} />
-            }>
-            <a href='https://docs.google.com/document/d/1FED8tGpTMxd8k2zyBdKQADlN7tcXGLSXJJ_pIduu2Qs/edit?usp=sharing' target='_blank'>
-            <Feature
-              iconBg={useColorModeValue('yellow.100', 'yellow.900')}
-              text={'Click Here to View Coffee Pricelist'}
-            />
-            </a>
-          </Stack>
-        </Stack>
-        <Flex>
-          <Image
-            rounded={'md'}
-            alt={'feature image'}
-            src={
-              'https://res.cloudinary.com/dlgyqy69b/image/upload/v1712733555/DALL_E_2024-04-10_15.11.24_-_Create_an_extremely_extended_ultra_panoramic_and_cinematic_hyperrealistic_mockup_of_a_high-quality_unbranded_coffee_bag_on_a_wooden_counter._The_view_muple9.webp'
+              'https://res.cloudinary.com/dlgyqy69b/image/upload/v1713165845/Mockup_1.5x_paxd3n.png'
             }
             objectFit={'cover'}
           />
