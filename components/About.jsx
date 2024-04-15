@@ -33,7 +33,7 @@ export default function SplitWithImage() {
         <Stack spacing={4}>
           <Heading color={'black'} fontSize={'4xl'} fontFamily={'Inter-Bold'} >What is Root & Grounds?</Heading>
           <Text color={'black.900'} fontSize={'md'}>
-          We deliver premium natural foods directly to your doorstep. We're doing coffee first then maybe other food like sourdough, raw honey, and many other hard-to-find foods 👀
+          We deliver premium natural foods directly to your doorstep. We are doing coffee first then maybe other food like sourdough, raw honey, and many other hard-to-find foods 👀
           </Text>
           <Stack
             spacing={4}
