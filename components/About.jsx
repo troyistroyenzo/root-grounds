@@ -31,7 +31,7 @@ export default function SplitWithImage() {
     <Container maxW={'lg'} py={250}>
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
         <Stack spacing={4}>
-          <Heading color={'black'} fontSize={'4xl'} fontFamily={'Inter-Bold'} >What is Root & Grounds?</Heading>
+          <Heading color={'black'} fontWeight={'600'} fontSize={'4xl'} fontFamily={'Bowlby'} >What is Root & Grounds?</Heading>
           <Text color={'black.900'} fontSize={'md'}>
           We deliver premium natural foods directly to your doorstep. We are doing coffee first then maybe other food like sourdough, raw honey, and many other delicious foods👀
           </Text>

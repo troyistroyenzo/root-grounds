@@ -110,7 +110,7 @@ const features = [
     color: '#0000FF', // Blue
     price: 'PHP 355.00 / 250g',
     visible: 'true',
-    tagText: 'Coming soon',
+    tagText: 'Best seller',
     tagBg: 'green.300',
   },
   {
@@ -151,9 +151,10 @@ export default function GridListWithHeading() {
   return (
     <Box p={4}>
       <Stack spacing={4} as={Container} maxW={'3xl'} textAlign={'center'}>
-        <Heading fontSize={'3xl'} color={'black'} fontFamily={'Inter-Bold'}>Product Offerings</Heading>
+        <Heading fontSize={'3xl'} color={'black'} fontWeight={'500'} fontFamily={'Inter-Bold'}>Product Offerings</Heading>
         <Text color={'black'} fontFamily={'Inter'} fontSize={'xl'}>
-          Here are some of the flavors we got for you 👀
+          Check out our coffee flavors 👀
+          <br/>
         </Text>
       </Stack>
       <Flex>
@@ -172,13 +173,9 @@ export default function GridListWithHeading() {
           {features.map((feature) => (
             <HStack key={feature.id} align={'left'}>
                
-              <Box color={feature.color} px={2}>
-                <Icon as={BiSolidCoffeeBean} px={2} w={'200%'} pd={'2rem'} />
-              </Box>
               <VStack align={'left'}>
-                
-                <Text fontWeight={800} fontSize={'2xl'}>{feature.bean}
-                {feature.visible === 'true' && (
+                <Box columns={{ base: 2, md: 2, lg: 4 }}>
+              {feature.visible === 'true' && (
                   <Tag
                   key={feature.id}
                   size={'sm'}
@@ -188,12 +185,15 @@ export default function GridListWithHeading() {
                   {feature.tagText}
                 </Tag>
                 )}
+                </Box>
+                <Text fontWeight={600} fontSize={'2xl'}>{feature.bean}
+                
                 
                 </Text>
                 
                 
                 <Text fontWeight={600} fontSize={'lg'}>{feature.price}</Text>
-                <Text color={'black'} fontSize={'sm'}>{feature.profile}</Text>
+                <Text fontWeight={400} color={'black'} fontSize={'sm'}>{feature.profile}</Text>
                 
               </VStack>
               
