@@ -40,13 +40,6 @@ export default function SplitWithImage() {
             divider={
               <StackDivider borderColor={useColorModeValue('gray.100', 'gray.700')} />
             }>
-              <a href='https://drive.google.com/file/d/11tmzYn698LLBoGX2eZONzz0TuAH2QiQJ/view?usp=sharing' target='_blank'>
-              <Feature
-                iconBg={useColorModeValue('yellow.900', 'brown.900')}
-                icon={FaInstagram}
-                text={'Coffee Beans Price List'}
-              />
-              </a>
               <a href='https://www.facebook.com/rootandgrounds/' target='_blank'>
               <Feature
                 iconBg={useColorModeValue('blue.400', 'blue.900')}
