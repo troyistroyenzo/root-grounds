@@ -195,11 +195,9 @@ export default function LargeWithLogoCentered() {
             align={{ base: 'center', md: 'center' }}>
            <FaPhone/>
             <Box href={'#'}>
-                  0961-313-1668
-              </Box>
-                
+                0961-313-1668
+            </Box>
             </Container>
-
             <Container
             as={Stack}
             direction={{ base: 'row', md: 'row' }}
@@ -234,7 +232,7 @@ export default function LargeWithLogoCentered() {
           <Logo />
         </Flex>
         <Text pt={6} fontSize={'sm'} textAlign={'center'}>
-          © 2024 R&G Co. All rights reserved
+          © 2024 R&G Co. | All Rights Reserved.
         </Text>
         <Container
         as={Stack}
