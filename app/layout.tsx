@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   description: "Delivering top-tier Specialty and Single Origin Coffee Beans directly to your doorstep. Taste the quality and uniqueness with every sip",
 }
 
-const CrispWithNoSSR = dynamic(() => import("@/components/crisp"), { ssr: false }); // Load with no SSR
+const CrispWithNoSSR = dynamic(() => import("@/components/Crisp"), { ssr: false }); // Load with no SSR
 
 
 export default function RootLayout({
