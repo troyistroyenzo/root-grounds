@@ -5,6 +5,7 @@ import Products from "@/components/Products"
 import About from "@/components/About"
 import Footer from "@/components/Footer"
 import FAQ from "@/components/FAQ"
+import Newsletter from "@/components/Newsletter"
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
     <About/>
     {/* <Features/> */}
     <Products/>
+    <Newsletter/>
     <FAQ/>
 
     </>
