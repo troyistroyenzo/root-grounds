@@ -195,14 +195,10 @@ export default function GridListWithHeading() {
                 </Tag>
                 )}
                 </Box>
-                <Text fontWeight={600} fontSize={'2xl'}>{feature.bean}
-                
-                
+                <Text fontWeight={500} fontSize={'2xl'}>{feature.bean}
                 </Text>
-                
-                
-                <Text fontWeight={600} fontSize={'lg'}>{feature.price}</Text>
-                <Text fontWeight={400} color={'black'} fontSize={'sm'}>{feature.profile}</Text>
+                <Text fontWeight={400} fontSize={'lg'}>{feature.price}</Text>
+                <Text color={'black'} fontSize={'sm'}>{feature.profile}</Text>
                 
               </VStack>
               

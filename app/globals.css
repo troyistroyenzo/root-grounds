@@ -8,7 +8,7 @@
   font-family: 'Inter';
   src: url(../assets/fonts/Inter-Black.ttf);
   /* Add additional src lines for different font file formats, if necessary */
-  font-weight: normal;
+  font-weight: lighter;
   font-style: normal;
 }
 
