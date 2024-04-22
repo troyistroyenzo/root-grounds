@@ -8,6 +8,8 @@ import {
   Flex,
   Text,
   Container,
+  Stack,
+  Heading,
 } from '@chakra-ui/react';
 import { ChevronDownIcon } from '@chakra-ui/icons';
 import { useState } from 'react';
@@ -34,10 +36,17 @@ export default function SimpleAccordion() {
 
   return (
     <Flex
-      minH={'100vh'}
+      minH={'70vh'}
       align={'center'}
       justify={'center'}>
       <Container>
+      <Stack spacing={4} py={19} as={Container} maxW={'3xl'} textAlign={'center'}>
+        <Heading fontSize={'3xl'} color={'black'} fontWeight={'500'} fontFamily={'Inter-Bold'}>FAQs</Heading>
+        <Text color={'black'} fontFamily={'Inter'} fontSize={'xl'}>
+          Got questions? We have the answers! 🤔
+          <br/>
+        </Text>
+      </Stack>
         <Accordion allowMultiple width="100%" maxW="lg" rounded="lg">
           {faqItems.map((item, index) => (
             <AccordionItem key={index}>
@@ -46,7 +55,7 @@ export default function SimpleAccordion() {
                 alignItems="center"
                 justifyContent="space-between"
                 p={4}>
-                <Text fontSize="md">{item.question}</Text>
+                <Text fontSize="md" fontWeight={600}>{item.question}</Text>
                 <ChevronDownIcon fontSize="24px" />
               </AccordionButton>
               <AccordionPanel pb={4}>

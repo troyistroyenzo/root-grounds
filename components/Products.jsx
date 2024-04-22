@@ -40,7 +40,7 @@ const features = [
     profile: 'Caramel Aroma, Citrus Acidity, Syrupy Body, Chocolate Flavor & Finish',
     color: '#FFA500', // Orange
     price: 'PHP 415.00 / 250g',
-    tagText: 'Exotic',
+    tagText: '',
     tagBg: 'yellow.300',
     visible: 'false'
   },
@@ -133,6 +133,16 @@ const features = [
     tagText: 'Coming soon',
     tagBg: 'black',
   },
+  {
+    id: 13,
+    bean: 'Dunamis Blend',
+    profile: ' Powerful coffee punch for a monday morning. Dark, nutty, chocolate',
+    color: '#000000', // Blue
+    price: '',
+    visible: 'true',
+    tagText: 'Blend',
+    tagBg: 'brown',
+  },
 ];
 
 const Feature = ({ text, icon, iconBg }) => {
@@ -150,25 +160,24 @@ const Feature = ({ text, icon, iconBg }) => {
 export default function GridListWithHeading() {
   return (
     <Box p={4}>
-      <Stack spacing={4} as={Container} maxW={'3xl'} textAlign={'center'}>
-        <Heading fontSize={'3xl'} color={'black'} fontWeight={'500'} fontFamily={'Inter-Bold'}>Product Offerings</Heading>
+      <Stack spacing={4} py={19} as={Container} maxW={'3xl'} textAlign={'center'}>
+      <Heading fontSize={'3xl'} color={'black'} fontWeight={'500'} fontFamily={'Inter-Bold'}>Product Offerings</Heading>
         <Text color={'black'} fontFamily={'Inter'} fontSize={'xl'}>
-          Check out our coffee flavors 👀
-          <br/>
+          Here are some fresh produce that we have for 👀
         </Text>
       </Stack>
-      <Flex>
-          <Image
+      <Stack spacing={4} as={Container} maxW={'2xl'} textAlign={'center'}>
+      <Image
             rounded={'md'}
             alt={'feature image'}
             src={
               'https://res.cloudinary.com/dlgyqy69b/image/upload/v1712558819/DALL_E_2024-04-08_14.46.13_-_Create_a_panoramic_image_featuring_a_series_of_specialty_and_single_origin_coffee_beans_each_from_a_different_country._Each_bean_is_visually_represen_myw1nf.webp'
             }
-            objectFit={'cover'}
+            objectFit={'fit'}
+            objectPosition={'center'}
           />
-        </Flex>
-       
-      <Container  fontFamily={'Inter'} maxW={'6xl'} mt={10}>
+      </Stack>
+      <Container  fontFamily={'Inter'} maxW={'2xl'} mt={10}>
         <SimpleGrid columns={{ base: 2, md: 2, lg: 4 }} spacing={10}>
           {features.map((feature) => (
             <HStack key={feature.id} align={'left'}>

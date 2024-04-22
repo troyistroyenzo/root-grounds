@@ -66,7 +66,7 @@ function Scene(props) {
         geometry={nodes.Object001_Object001_mtl_0.geometry}
         material={materials.Object001_mtl}
         position={[0.6, 0.7, 0]}
-        scale={[0.12, 0.12, 0.12]}
+        scale={[0.22, 0.22, 0.22]}
         rotation={[-1.5, 0.2, 0.1]} // Adjust scale as needed
       />
     </group>

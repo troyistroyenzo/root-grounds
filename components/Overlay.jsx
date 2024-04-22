@@ -21,7 +21,7 @@ const Overlay = () => {
         
         <Image src={Logo} alt="Logo" />
       </div>
-      <div style={{ position: 'absolute', bottom: 120, left: 60, fontSize: '15px', color: 'black',}}>
+      <div style={{ position: 'absolute', bottom: 170, left: 60, fontSize: '15px', color: 'black',}}>
       Top-tier specialty and 
         <br />
         single-origin coffee beans 

@@ -13,7 +13,7 @@ import {
   VisuallyHidden,
 } from '@chakra-ui/react'
 import { ReactNode } from 'react'
-import { FaInstagram, FaTwitter, FaYoutube, FaFacebook, FaTikTok, FaPhone, FaMailBulk} from 'react-icons/fa'
+import { FaInstagram, FaTwitter, FaYoutube, FaFacebook, FaTikTok, FaPhone, FaMailBulk, FaViber} from 'react-icons/fa'
 import { FaTiktok } from 'react-icons/fa6'
 
 
@@ -208,6 +208,16 @@ export default function LargeWithLogoCentered() {
                 rootandgrounds@gmail.com
               </Box>
             </Container>
+            <Container
+            as={Stack}
+            direction={{ base: 'row', md: 'row' }}
+            justify={{ base: 'left', md: 'left' }}
+            align={{ base: 'center', md: 'center' }}>
+           <FaViber/>
+            <Box href={'https://vb.me/BusinessAccount/6a73ae18-fd63-11ee-80fb-866a812f0291'}>
+                Viber Chat
+            </Box>
+            </Container>
               </Stack>
           </Stack>
         </SimpleGrid>
@@ -236,7 +246,7 @@ export default function LargeWithLogoCentered() {
         </Text>
         <Container
         as={Stack}
-        maxW={'3xl'}
+        maxW={'2xl'}
         py={9}
         direction={{ base: 'column', md: 'row' }}
         spacing={4}
