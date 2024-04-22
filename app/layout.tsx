@@ -6,6 +6,7 @@ import "./globals.css";
 import Footer from "@/components/Footer"
 import Head from 'next/head';
 import dynamic from "next/dynamic"; 
+import { Analytics } from "@vercel/analytics/react"
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -36,7 +37,9 @@ export default function RootLayout({
           {children}
           <Footer/>
         </ChakraProvider>
+        <Analytics/>
       </body>
     </html>
+
   );
 }
