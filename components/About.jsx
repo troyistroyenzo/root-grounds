@@ -9,27 +9,54 @@ import {
   Text,
   Stack,
   StackDivider,
+  Tag,
   Icon,
   useColorModeValue,
 } from '@chakra-ui/react'
 import { ReactElement } from 'react'
-import { FaInstagram, FaTwitter, FaYoutube, FaFacebook} from 'react-icons/fa'
+import { IoAnalyticsSharp, IoLogoBitcoin, IoSearchSharp, IoFood} from 'react-icons/io5'
 
-const Feature = ({ text, icon, iconBg }) => {
+
+const Label = ({ text, icon, iconBg }) => {
   return (
-    <Stack direction={'row'} align={'center'}>
-      <Flex w={8} h={8} align={'center'} justify={'center'} rounded={'full'} bg={iconBg}>
-        {icon}
-      </Flex>
-      <Text fontFamily={'inter'} fontWeight={600}>{text}</Text>
-    </Stack>
+    <Tag
+                  key='Tes'
+                  size={'sm'}
+                  bg={'blue'}
+                  color={'white'}
+                  >
+                 Coming Soon
+    </Tag>
   )
 }
 
+
+const Feature = ({ subtext, text, icon, iconBg, label }) => {
+  return (
+    <Stack direction={'column'} align={'left'} p={'1rem'}>
+      <Stack direction={'rows'} align={'left'}>
+      <Flex bg={'yellow'} w={8} h={8} align={'center'} justify={'center'} rounded={'full'} bg={iconBg}>
+        {icon} 
+      </Flex>
+      <Text fontFamily={'inter'} fontWeight={700}>{text}</Text>
+
+
+      </Stack>
+      
+      <Text fontFamily={'inter'} fontWeight={400}>{subtext}</Text>
+ 
+    </Stack>
+    
+  )
+}
+
+
+
 export default function SplitWithImage() {
   return (
-    <Container maxW={'lg'} py={250}>
-      <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
+    <Container maxW={'md'} py={250}>
+      <SimpleGrid columns={{ base: 1, md: 2 }} spacing={100}>
+
         <Stack spacing={4}>
           <Heading color={'black'} fontWeight={'600'} fontSize={'4xl'} fontFamily={'Bowlby'} >What is Root & Grounds?</Heading>
           <Text color={'black.900'} fontSize={'md'}>
@@ -40,20 +67,6 @@ export default function SplitWithImage() {
             divider={
               <StackDivider borderColor={useColorModeValue('gray.100', 'gray.700')} />
             }>
-              <a href='https://www.facebook.com/rootandgrounds/' target='_blank'>
-              <Feature
-                iconBg={useColorModeValue('blue.400', 'blue.900')}
-                icon={FaInstagram}
-                text={'Facebook Page'}
-              />
-              </a>
-              <a href='https://www.instagram.com/rootandgrounds/' target='_blank'>
-              <Feature
-                iconBg={useColorModeValue('purple.700', 'blue.900')}
-                icon={FaInstagram}
-                text={'Instagram Page'}
-              />
-              </a>
           </Stack>
         </Stack>
         <Flex>
@@ -66,6 +79,45 @@ export default function SplitWithImage() {
             objectFit={'cover'}
           />
         </Flex>
+
+        <Stack spacing={4}>
+          <Heading color={'black'} fontWeight={'600'} fontSize={'4xl'} fontFamily={'Bowlby'} >Why us?</Heading>
+          <Text color={'black.900'} fontSize={'md'}>
+          We want to be your go-to real food platform. We leverage highly scalable technology to make your ordering experience smooth and fun.
+          </Text>
+          <Stack
+            spacing={4}
+            divider={
+              <StackDivider borderColor={useColorModeValue('gray.100', 'gray.700')} />
+            }>
+              <Feature
+              icon={'🥦'}
+              iconBg={useColorModeValue('yellow.100', 'yellow.900')}
+              text={'Fresh produce from the earth'}
+              subtext={'We do promote only whole foods. No sugar, preservatives, stabilisers or any of that jazz.'}
+              />
+              <Feature
+              icon={'🚚'}
+              iconBg={useColorModeValue('green.100', 'green.900')}
+              text={'Same Day Delivery & Batch Shipping'}
+              subtext={'We provide customers with numerous delivery options, coupled with our powerful backend that allows you to even track your order.'}
+            />
+            <Feature
+              icon={'🔁'}
+              iconBg={useColorModeValue('purple.100', 'purple.900')}
+              text={'Subscription Plans'} 
+              subtext={'Ordering over and over can be tiring. That is why we will soon integrate recurring orders for our loyal patrons'}
+            />
+            <Feature
+              icon={'💳'}
+              iconBg={useColorModeValue('purple.100', 'purple.900')}
+              text={'Integrated Payments (coming soon'}
+              subtext={'We will be accepting a wide array of payment methods: from gcash, bank all the way to bitcoin!'}
+            />
+          </Stack>
+        </Stack>
+
+        
       </SimpleGrid>
     </Container>
   )

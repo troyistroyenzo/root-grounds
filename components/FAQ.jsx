@@ -29,7 +29,7 @@ export default function SimpleAccordion() {
       answer: "Delivery charges will be shouldered by the customer."
     },
     {
-      question: "Is Root & Grounds open to B2B partnerships?",
+      question: "Are you open to B2B partnerships?",
       answer: " Yes, definitely! Connect with us at rootandgrounds@gmail.com. Custom orders are also available within reason."
     }
   ]);
@@ -37,6 +37,7 @@ export default function SimpleAccordion() {
   return (
     <Flex
       minH={'70vh'}
+      py={'30vh'}
       align={'center'}
       justify={'center'}>
       <Container>

@@ -22,11 +22,11 @@ const Overlay = () => {
         <Image src={Logo} alt="Logo" />
       </div>
       <div style={{ position: 'absolute', bottom: 170, left: 60, fontSize: '15px', color: 'black',}}>
-      Top-tier specialty and 
+      One-stop-shop FOR
         <br />
-        single-origin coffee beans 
+        coffee beans and fresh produce.
         <br />
-        delivered to you.
+        delivered to your doorstep.
         <br />
         <div style={{ position: 'relative', marginTop: 10, display: 'inline-block' }}>
           <a style={{ fontSize: '25px', fontWeight: 900, letterSpacing: 2 }} href="https://form.jotform.com/rootandgrounds/order-form"> 
