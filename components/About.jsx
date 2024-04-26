@@ -17,25 +17,12 @@ import { ReactElement } from 'react'
 import { IoAnalyticsSharp, IoLogoBitcoin, IoSearchSharp, IoFood} from 'react-icons/io5'
 
 
-const Label = ({ text, icon, iconBg }) => {
-  return (
-    <Tag
-                  key='Tes'
-                  size={'sm'}
-                  bg={'blue'}
-                  color={'white'}
-                  >
-                 Coming Soon
-    </Tag>
-  )
-}
-
 
 const Feature = ({ subtext, text, icon, iconBg, label }) => {
   return (
     <Stack direction={'column'} align={'left'} p={'1rem'}>
       <Stack direction={'rows'} align={'left'}>
-      <Flex bg={'yellow'} w={8} h={8} align={'center'} justify={'center'} rounded={'full'} bg={iconBg}>
+      <Flex bg={'yellow'} w={8} h={8} align={'center'} justify={'center'} rounded={'full'}>
         {icon} 
       </Flex>
       <Text fontFamily={'inter'} fontWeight={700}>{text}</Text>
