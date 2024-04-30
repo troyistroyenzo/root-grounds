@@ -39,6 +39,7 @@ export default function App() {
   }, [])
   
   return (
+    <a style={{ fontSize: '25px', fontWeight: 900, letterSpacing: 2 }} href="https://form.jotform.com/rootandgrounds/order-form" target='_blank'> 
     <Canvas
       shadows
       dpr={[1, perfSucks ? 1.5 : 2]}
@@ -51,6 +52,7 @@ export default function App() {
       </group>
       <Env perfSucks={perfSucks} />
     </Canvas>
+    </a>
   )
 }
 

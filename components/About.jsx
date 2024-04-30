@@ -41,13 +41,13 @@ const Feature = ({ subtext, text, icon, iconBg, label }) => {
 
 export default function SplitWithImage() {
   return (
-    <Container maxW={'md'} py={250}>
+    <Container maxW={'xl'} py={150}>
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={100}>
 
         <Stack spacing={4}>
-          <Heading color={'black'} fontWeight={'600'} fontSize={'4xl'} fontFamily={'Bowlby'} >What is Root & Grounds?</Heading>
+          <Heading color={'black'} fontWeight={'600'} fontSize={'4xl'} fontFamily={'Inter-bold'} >What is Root & Grounds?</Heading>
           <Text color={'black.900'} fontSize={'md'}>
-          We deliver premium natural foods directly to your doorstep. We are doing coffee first then maybe other food like sourdough, raw honey, and many other delicious foods 👀
+          We deliver premium natural foods directly to your doorstep, starting with our exquisite coffee selection. Stay tuned for our expanding range, including sourdough, raw honey, and an array of other delectable options! 👀
           </Text>
           <Stack
             spacing={4}
@@ -68,40 +68,40 @@ export default function SplitWithImage() {
         </Flex>
 
         <Stack spacing={4}>
-          <Heading color={'black'} fontWeight={'600'} fontSize={'4xl'} fontFamily={'Bowlby'} >Why us?</Heading>
+          <Heading color={'black'} fontWeight={'600'} fontSize={'4xl'} fontFamily={'Inter-bold'} >Why us?</Heading>
           <Text color={'black.900'} fontSize={'md'}>
-          We want to be your go-to real food platform. We leverage highly scalable technology to make your ordering experience smooth and fun.
+          We aspire to be your ultimate destination for real food, leveraging highly scalable technology to ensure a smooth and enjoyable ordering experience.
           </Text>
           <Stack
-            spacing={4}
-            divider={
-              <StackDivider borderColor={useColorModeValue('gray.100', 'gray.700')} />
-            }>
-              <Feature
-              icon={'🥦'}
-              iconBg={useColorModeValue('yellow.100', 'yellow.900')}
-              text={'Fresh produce from the earth'}
-              subtext={'We do promote only whole foods. No sugar, preservatives, stabilisers or any of that jazz.'}
-              />
-              <Feature
-              icon={'🚚'}
-              iconBg={useColorModeValue('green.100', 'green.900')}
-              text={'Same Day Delivery & Batch Shipping'}
-              subtext={'We provide customers with numerous delivery options, coupled with our powerful backend that allows you to even track your order.'}
-            />
-            <Feature
-              icon={'🔁'}
-              iconBg={useColorModeValue('purple.100', 'purple.900')}
-              text={'Subscription Plans'} 
-              subtext={'Ordering over and over can be tiring. That is why we will soon integrate recurring orders for our loyal patrons'}
-            />
-            <Feature
-              icon={'💳'}
-              iconBg={useColorModeValue('purple.100', 'purple.900')}
-              text={'Integrated Payments (coming soon'}
-              subtext={'We will be accepting a wide array of payment methods: from gcash, bank all the way to bitcoin!'}
-            />
-          </Stack>
+          spacing={4}
+          divider={
+            <StackDivider borderColor={useColorModeValue('gray.100', 'gray.700')} />
+          }>
+          <Feature
+            icon={'🥦'}
+            iconBg={useColorModeValue('yellow.100', 'yellow.900')}
+            text={'Fresh produce from the earth'}
+            subtext={'We promote only whole foods, free from sugar, preservatives, stabilizers, or any additives.'}
+          />
+          <Feature
+            icon={'🚚'}
+            iconBg={useColorModeValue('green.100', 'green.900')}
+            text={'Same Day Delivery & Batch Shipping'}
+            subtext={'Enjoy multiple delivery options, supported by our robust backend that allows you to track your order.'}
+          />
+          <Feature
+            icon={'🔁'}
+            iconBg={useColorModeValue('purple.100', 'purple.900')}
+            text={'Subscription Plans (coming soon)'}
+            subtext={'Say goodbye to repetitive ordering! Soon, we will offer recurring orders for our loyal patrons.'}
+          />
+          <Feature
+            icon={'💳'}
+            iconBg={useColorModeValue('purple.100', 'purple.900')}
+            text={'Integrated Payments (coming soon)'}
+            subtext={'Get ready for seamless transactions! We will accept a wide range of payment methods, from GCash and bank transfers to Bitcoin.'}
+          />
+        </Stack>
         </Stack>
 
         

@@ -17,16 +17,20 @@ import { useState } from 'react';
 export default function SimpleAccordion() {
   const [faqItems, setFaqItems] = useState([
     {
-      question: "How can I order?",
-      answer: "All orders will be purchased through our order form. Note: Limited stock for each batch."
+      question: "How 2 order?",
+      answer: "Order through our official order form (we have only one, if you see anything else it's a scam)"
     },
     {
       question: "When will I get my beans?",
-      answer: "All orders will be ready for delivery every Monday and will be shipped via customers preferred courier."
+      answer: "We do batch orders so times may vary (3-5 days) and will be shipped via customers preferred courier."
     },
     {
       question: "Any delivery charges?",
-      answer: "Delivery charges will be shouldered by the customer."
+      answer: "Delivery charges will be shouldered by the customer. (because we can't cover everyones shipping!)"
+    },
+    {
+      question: "Where can you deliver?",
+      answer: "Anywhere in metro manila. We don't have any way to ship outside the city but we will soon ;)"
     },
     {
       question: "Are you open to B2B partnerships?",

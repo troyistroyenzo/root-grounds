@@ -29,7 +29,7 @@ const features = [
     bean: 'Brazil Santos',
     profile: 'Chocolate Aroma, Smooth Body, Mild Acidity, Bakers Chocolate',
     color: '#A52A2A', // Brown
-    price: 'PHP 445.00 / 250g',
+    price: '',
     tagText: 'Best Seller',
     tagBg: 'green.300',
     visible: 'true'
@@ -39,7 +39,7 @@ const features = [
     bean: 'Brazil Dutra',
     profile: 'Caramel Aroma, Citrus Acidity, Syrupy Body, Chocolate Flavor & Finish',
     color: '#FFA500', // Orange
-    price: 'PHP 415.00 / 250g',
+    price: '',
     tagText: '',
     tagBg: 'yellow.300',
     visible: 'false'
@@ -49,7 +49,7 @@ const features = [
     bean: 'Brazil Cerrado',
     profile: 'Dark Chocolate, Citrus Acidity, Syrupy Body, Chocolate Flavor & Woody Finish',
     color: '#A52A2A', // Brown
-    price: 'PHP 475.00 / 250g',
+    price: '',
     visible: 'false'
   },
   {
@@ -57,7 +57,7 @@ const features = [
     bean: 'Guatemala',
     profile: 'Orange Aroma, Smooth Body, Mild Acidity, Orange Notes',
     color: '#FFA500', // Orange
-    price: 'PHP 475.00 / 250g',
+    price: '',
     visible: 'true',
     tagText: 'Best Seller',
     tagBg: 'green.300',
@@ -67,14 +67,14 @@ const features = [
     bean: 'Colombia',
     profile: 'Sweet and Nutty Aroma, Mild Acidity, Chocolate Finish, Nutty Aftertaste',
     color: '#008000', // Green
-    price: 'PHP 505.00 / 250g',
+    price: '',
   },
   {
     id: 6,
     bean: 'El Salvador',
     profile: 'Caramel Aroma, Grapefruit citrus Acidity, Caramel and Dark Chocolate Notes',
     color: '#008000', // Green
-    price: 'PHP 550.00 / 250g',
+    price: '',
 
   },
   {
@@ -82,7 +82,7 @@ const features = [
     bean: 'Ethiopia Sidamo',
     profile: 'Jasmine Flower Aroma, Juicy Body, Lemon Acidity, Clean Finish',
     color: '#0000FF', // Blue
-    price: 'PHP 550.00 / 250g',
+    price: '',
     tagText: 'Best Seller',
     tagBg: 'green.300',
     visible: 'true',
@@ -92,14 +92,14 @@ const features = [
     bean: 'Ethiopia Masha',
     profile: 'Fruity Aroma, Bright Acidity, Berries Flavor, Chocolate Finish',
     color: '#008000', // Green
-    price: 'PHP 745.00 / 250g',
+    price: '',
   },
   {
     id: 9,
     bean: 'Burundi Lampibo',
     profile: 'Slick Body, Dense Citrus Acidity, GrapeFruit and Peach Sweetness',
     color: '#008000', // Green
-    price: 'PHP 535.00 / 250g',
+    price: '',
     visible: 'false',
 
   },
@@ -108,7 +108,7 @@ const features = [
     bean: 'Vietnam',
     profile: 'Burnt Wood and Nutty Aroma, Mild Acidity, Medium Body, Nutty and Wood Notes w hint of Cacao Nibs',
     color: '#0000FF', // Blue
-    price: 'PHP 355.00 / 250g',
+    price: '',
     visible: 'true',
     tagText: 'Best seller',
     tagBg: 'green.300',
@@ -161,9 +161,9 @@ export default function GridListWithHeading() {
   return (
     <Box p={4}>
       <Stack spacing={4} py={19} as={Container} maxW={'3xl'} textAlign={'center'}>
-      <Heading fontSize={'3xl'} color={'black'} fontWeight={'500'} fontFamily={'Inter-Bold'}>Product Offerings</Heading>
+      <Heading fontSize={'3xl'} color={'black'} fontWeight={'500'} fontFamily={'Inter-Bold'}>Coffee Beans.</Heading>
         <Text color={'black'} fontFamily={'Inter'} fontSize={'xl'}>
-          Here are some fresh produce that we have for 👀
+          The best beans in town... no seriously.
         </Text>
       </Stack>
       <Stack spacing={4} as={Container} maxW={'2xl'} textAlign={'center'}>

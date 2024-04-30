@@ -22,15 +22,15 @@ const Overlay = () => {
         <Image src={Logo} alt="Logo" />
       </div>
       <div style={{ position: 'absolute', bottom: 170, left: 60, fontSize: '15px', color: 'black',}}>
-      One-stop-shop FOR
+      {/* One-stop-shop FOR
         <br />
         coffee beans and fresh produce.
         <br />
         delivered to your doorstep.
-        <br />
+        <br /> */}
         <div style={{ position: 'relative', marginTop: 10, display: 'inline-block' }}>
-          <a style={{ fontSize: '25px', fontWeight: 900, letterSpacing: 2 }} href="https://form.jotform.com/rootandgrounds/order-form"> 
-            ORDER HERE
+          <a style={{ fontSize: '15px', fontWeight: 900, letterSpacing: 2 }}> 
+            PRESS ANYWHERE TO ORDER
           </a>
           <div style={{ marginTop: 6, height: 2.5, width: '100%', background: '#3e3e3d' }} />
         </div>
