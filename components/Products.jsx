@@ -135,6 +135,26 @@ const features = [
   },
   {
     id: 13,
+    bean: 'Niaragua',
+    profile: ' Jasmine, chocolate, honey, and even black tea',
+    color: '#000000', // Blue
+    price: '',
+    visible: 'true',
+    tagText: 'Coming soon',
+    tagBg: 'black',
+  },
+  {
+    id: 13,
+    bean: 'Tanzania',
+    profile: ' Jasmine, chocolate, honey, and even black tea',
+    color: '#000000', // Blue
+    price: '',
+    visible: 'true',
+    tagText: 'Coming soon',
+    tagBg: 'black',
+  },
+  {
+    id: 14,
     bean: 'Dunamis Blend',
     profile: ' Powerful coffee punch for a monday morning. Dark, nutty, chocolate',
     color: '#000000', // Blue

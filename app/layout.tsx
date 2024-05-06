@@ -12,7 +12,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Root & Grounds",
-  description: "Root and Grounds is more than just a coffee shop; it's a destination for those seeking a fresh, wholesome experience. We take pride in offering fresh produce sourced directly from the earth, ensuring that every sip and bite is free from added sugars, preservatives, and stabilizers. Our commitment to sustainability extends to our delivery options, with same-day delivery and batch shipping available for your convenience. Soon, we'll introduce subscription plans for our loyal customers, making it easier than ever to enjoy your favorite items on a regular basis. Stay tuned for our integrated payment options, which will include a variety of methods, from GCash to Bitcoin. Join us at Root and Grounds and experience coffee culture redefined.",
+  description: "Elevate the mundane with better coffee, better foods",
 }
 
 const CrispWithNoSSR = dynamic(() => import("@/components/Crisp"), { ssr: false }); // Load with no SSR
