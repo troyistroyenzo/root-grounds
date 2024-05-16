@@ -41,9 +41,8 @@ const Feature = ({ subtext, text, icon, iconBg, label }) => {
 
 export default function SplitWithImage() {
   return (
-    <Container maxW={'xl'} py={150}>
+    <Container maxW={'4xl'} py={100}>
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={100}>
-
         <Stack spacing={4}>
           <Heading color={'black'} fontWeight={'600'} fontSize={'4xl'} fontFamily={'Inter-bold'} >What is Root & Grounds?</Heading>
           <Text color={'black.900'} fontSize={'md'}>
@@ -67,7 +66,7 @@ export default function SplitWithImage() {
           />
         </Flex>
 
-        <Stack spacing={4}>
+        <Stack spacing={10}>
           <Heading color={'black'} fontWeight={'600'} fontSize={'4xl'} fontFamily={'Inter-bold'} >Why us?</Heading>
           <Text color={'black.900'} fontSize={'md'}>
           We aspire to be your ultimate destination for real food, leveraging highly scalable technology to ensure a smooth and enjoyable ordering experience.
@@ -107,5 +106,7 @@ export default function SplitWithImage() {
         
       </SimpleGrid>
     </Container>
+
+    
   )
 }

@@ -36,49 +36,6 @@ const features = [
   },
   {
     id: 2,
-    bean: 'Brazil Dutra',
-    profile: 'Caramel Aroma, Citrus Acidity, Syrupy Body, Chocolate Flavor & Finish',
-    color: '#FFA500', // Orange
-    price: '',
-    tagText: '',
-    tagBg: 'yellow.300',
-    visible: 'false'
-  },
-  {
-    id: 3,
-    bean: 'Brazil Cerrado',
-    profile: 'Dark Chocolate, Citrus Acidity, Syrupy Body, Chocolate Flavor & Woody Finish',
-    color: '#A52A2A', // Brown
-    price: '',
-    visible: 'false'
-  },
-  {
-    id: 4,
-    bean: 'Guatemala',
-    profile: 'Orange Aroma, Smooth Body, Mild Acidity, Orange Notes',
-    color: '#FFA500', // Orange
-    price: '',
-    visible: 'true',
-    tagText: 'Best Seller',
-    tagBg: 'green.300',
-  },
-  {
-    id: 5,
-    bean: 'Colombia',
-    profile: 'Sweet and Nutty Aroma, Mild Acidity, Chocolate Finish, Nutty Aftertaste',
-    color: '#008000', // Green
-    price: '',
-  },
-  {
-    id: 6,
-    bean: 'El Salvador',
-    profile: 'Caramel Aroma, Grapefruit citrus Acidity, Caramel and Dark Chocolate Notes',
-    color: '#008000', // Green
-    price: '',
-
-  },
-  {
-    id: 7,
     bean: 'Ethiopia Sidamo',
     profile: 'Jasmine Flower Aroma, Juicy Body, Lemon Acidity, Clean Finish',
     color: '#0000FF', // Blue
@@ -88,23 +45,17 @@ const features = [
     visible: 'true',
   },
   {
-    id: 8,
-    bean: 'Ethiopia Masha',
-    profile: 'Fruity Aroma, Bright Acidity, Berries Flavor, Chocolate Finish',
+    id: 3,
+    bean: 'Colombia',
+    profile: 'Sweet and Nutty Aroma, Mild Acidity, Chocolate Finish, Nutty Aftertaste',
     color: '#008000', // Green
     price: '',
+    tagText: 'Best Seller',
+    tagBg: 'green.300',
+    visible: 'true'
   },
   {
-    id: 9,
-    bean: 'Burundi Lampibo',
-    profile: 'Slick Body, Dense Citrus Acidity, GrapeFruit and Peach Sweetness',
-    color: '#008000', // Green
-    price: '',
-    visible: 'false',
-
-  },
-  {
-    id: 10,
+    id: 4,
     bean: 'Vietnam',
     profile: 'Burnt Wood and Nutty Aroma, Mild Acidity, Medium Body, Nutty and Wood Notes w hint of Cacao Nibs',
     color: '#0000FF', // Blue
@@ -113,6 +64,59 @@ const features = [
     tagText: 'Best seller',
     tagBg: 'green.300',
   },
+  {
+    id: 5,
+    bean: 'Mt. Apo',
+    profile: 'Chocolate, citrus, nutty, fruity, floral, caramel, spice.',
+    color: '#A52A2A', // Brown
+    price: '',
+    visible: 'true',
+    tagText: 'Best seller',
+    tagBg: 'green.300',
+  },
+  {
+    id: 6,
+    bean: 'Guatemala',
+    profile: 'Orange Aroma, Smooth Body, Mild Acidity, Orange Notes',
+    color: '#FFA500', // Orange
+    price: '',
+    visible: 'false'
+  },
+  {
+    id: 7,
+    bean: 'Brazil Dutra',
+    profile: 'Caramel Aroma, Citrus Acidity, Syrupy Body, Chocolate Flavor & Finish',
+    color: '#FFA500', // Orange
+    price: '',
+    tagText: '',
+    tagBg: 'yellow.300',
+    visible: 'false'
+  },
+  {
+    id: 8,
+    bean: 'El Salvador',
+    profile: 'Caramel Aroma, Grapefruit citrus Acidity, Caramel and Dark Chocolate Notes',
+    color: '#008000', // Green
+    price: '',
+
+  },
+  {
+    id: 9,
+    bean: 'Ethiopia Masha',
+    profile: 'Fruity Aroma, Bright Acidity, Berries Flavor, Chocolate Finish',
+    color: '#008000', // Green
+    price: '',
+  },
+  {
+    id: 10,
+    bean: 'Burundi Lampibo',
+    profile: 'Slick Body, Dense Citrus Acidity, GrapeFruit and Peach Sweetness',
+    color: '#008000', // Green
+    price: '',
+    visible: 'false',
+
+  },
+
   {
     id: 11,
     bean: 'Geisha',
@@ -125,6 +129,14 @@ const features = [
   },
   {
     id: 12,
+    bean: 'Brazil Cerrado',
+    profile: 'Dark Chocolate, Citrus Acidity, Syrupy Body, Chocolate Flavor & Woody Finish',
+    color: '#A52A2A', // Brown
+    price: '',
+    visible: 'false'
+  },
+  {
+    id: 13,
     bean: 'Bukidnon',
     profile: ' Jasmine, chocolate, honey, and even black tea',
     color: '#000000', // Blue
@@ -134,27 +146,23 @@ const features = [
     tagBg: 'black',
   },
   {
-    id: 13,
-    bean: 'Niaragua',
+    id: 14,
+    bean: 'Nicaragua',
     profile: ' Jasmine, chocolate, honey, and even black tea',
     color: '#000000', // Blue
     price: '',
-    visible: 'true',
-    tagText: 'Coming soon',
-    tagBg: 'black',
+    visible: 'false',
   },
   {
-    id: 13,
+    id: 15,
     bean: 'Tanzania',
     profile: ' Jasmine, chocolate, honey, and even black tea',
     color: '#000000', // Blue
     price: '',
-    visible: 'true',
-    tagText: 'Coming soon',
-    tagBg: 'black',
+    visible: 'false',
   },
   {
-    id: 14,
+    id: 16,
     bean: 'Dunamis Blend',
     profile: ' Powerful coffee punch for a monday morning. Dark, nutty, chocolate',
     color: '#000000', // Blue
@@ -163,6 +171,7 @@ const features = [
     tagText: 'Blend',
     tagBg: 'brown',
   },
+  
 ];
 
 const Feature = ({ text, icon, iconBg }) => {
