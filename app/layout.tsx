@@ -32,14 +32,16 @@ export default function RootLayout({
         <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
       <body className={inter.className}>
-      <CrispWithNoSSR />
-        <ChakraProvider>
-          {children}
-          <Footer/>
-        </ChakraProvider>
-        <Analytics/>
-      </body>
-    </html>
-
+    <CrispWithNoSSR />
+    <ChakraProvider>
+      {children}
+      <footer>
+        <Footer />
+      </footer>
+    </ChakraProvider>
+    <Analytics />
+  </body>
+</html>
+    
   );
 }

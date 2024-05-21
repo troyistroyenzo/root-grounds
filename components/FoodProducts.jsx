@@ -4,6 +4,7 @@ import {
   Box,
   Container,
   Heading,
+  Center,
   SimpleGrid,
   Icon,
   Text,
@@ -57,22 +58,70 @@ const features = [
 
 ];
 
-const Feature = ({ text, icon, iconBg }) => {
+
+const ProductSimple = ({ food, price, description, image}) => {
   return (
-    <Stack direction={'row'} align={'center'}>
-      <Flex w={8} h={8} align={'center'} justify={'center'} rounded={'full'} bg={iconBg}>
-        {icon}
-      </Flex>
-      <Text fontFamily={'inter'} fontWeight={600}>{text}</Text>
-    </Stack>
+    <Center py={12}>
+      <Box
+        role={'group'}
+        w={'full'}
+        bg={useColorModeValue('white', 'gray.800')}
+        boxShadow={'1xl'}
+        rounded={'lg'}
+        pos={'relative'}
+        zIndex={1}>
+        <Box
+          rounded={'lg'}
+          mt={-12}
+          w={'full'}
+          pos={'relative'}
+          height={'230px'}
+          _after={{
+            transition: 'all .3s ease',
+            content: '""',
+            w: 'full',
+            h: 'full',
+            pos: 'absolute',
+            top: 5,
+            left: 0,
+            backgroundImage: `url(${image})`,
+            filter: 'blur(15px)',
+            zIndex: -1,
+          }}
+          _groupHover={{
+            _after: {
+              filter: 'blur(20px)',
+            },
+          }}>
+          <Image
+            rounded={'lg'}
+            height={230}
+            width={3182}
+            objectFit={'cover'}
+            src={image}
+            alt="#"
+          />
+        </Box>
+        <Stack pt={10} align={'center'}>
+          <Heading fontSize={'2xl'} fontFamily={'body'} fontWeight={500}>
+          {food}
+          </Heading>
+          <Box p={2} align={'center'}>
+            <Text color={'gray.600'}>
+            {description}
+            </Text>
+          </Box>
+        </Stack>
+      </Box>
+    </Center>
   )
 }
 
 
 export default function GridListWithHeading() {
   return (
-    <Box p={4}>
-      <Stack spacing={4} py={19} as={Container} maxW={'3xl'} textAlign={'center'}>
+    <Box>
+      <Stack spacing={4} py={1} as={Container} maxW={'6xl'} textAlign={'center'}>
       <Heading fontSize={'3xl'} color={'black'} fontWeight={'500'} fontFamily={'Inter-Bold'}>Whole Foods</Heading>
         <Text color={'black'} fontFamily={'Inter'} fontSize={'xl'}>
           Sugar-free, soy-free, gluten-free: junk free produce that you need!
@@ -80,33 +129,19 @@ export default function GridListWithHeading() {
       </Stack>
       <Stack spacing={4} as={Container} maxW={'2xl'} textAlign={'center'}>
       </Stack>
-      <Container  fontFamily={'Inter'} maxW={'2xl'} mt={10}>
-        <SimpleGrid columns={{ base: 2, md: 2, lg: 4 }} spacing={10}>
-          {features.map((feature) => (
-            <HStack key={feature.id} align={'left'}>
-               
-              <VStack align={'left'}>
-                <Box columns={{ base: 2, md: 2, lg: 4 }}>
-              {feature.visible === 'true' && (
-                  <Tag
-                  key={feature.id}
-                  size={'sm'}
-                  bg={feature.tagBg}
-                  color={'white'}
-                  style={{ visibility: feature.visible === 'true' ? 'visible' : 'hidden' }}>
-                  {feature.tagText}
-                </Tag>
-                )}
-                </Box>
-                <Text fontWeight={500} fontSize={'2xl'}>{feature.bean}
-                </Text>
-                <Text fontWeight={400} fontSize={'lg'}>{feature.price}</Text>
-                <Text color={'black'} fontSize={'sm'}>{feature.profile}</Text>
-                
-              </VStack>
-              
-            </HStack>
-          ))}
+      <Container fontFamily={'Inter'} maxW={'4xl'} mt={10}>
+        <SimpleGrid columns={{ base: 2, md: 2, lg: 4 }} spacing={5}>
+          {/* {features.map((feature) => (
+            
+          ))} */}
+          <ProductSimple
+            food={'Sourdough'}
+            description={'Sourdough bread is lower in glycemic index compared to other breads, making it beneficial for blood sugar control.'}
+            image={'https://homesteadandchill.com/wp-content/uploads/2019/02/simple-sourdough-bread-recipe-homestead-feature.jpeg'}/>
+            <ProductSimple
+            food={'Honey'}
+            description={'Honey is a natural sweetener rich in antioxidants, which help reduce inflammation and support immune health.'}
+            image={'https://img.freepik.com/premium-photo/honey-jar_920207-7369.jpg'}/>
         </SimpleGrid>
       </Container>
     </Box>

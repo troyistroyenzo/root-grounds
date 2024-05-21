@@ -22,7 +22,7 @@ const Feature = ({ subtext, text, icon, iconBg, label }) => {
   return (
     <Stack direction={'column'} align={'left'} p={'1rem'}>
       <Stack direction={'rows'} align={'left'}>
-      <Flex bg={'yellow'} w={8} h={8} align={'center'} justify={'center'} rounded={'full'}>
+      <Flex bg={'#E8E6B3'} w={8} h={8} align={'center'} justify={'center'} rounded={'full'}>
         {icon} 
       </Flex>
       <Text fontFamily={'inter'} fontWeight={700}>{text}</Text>

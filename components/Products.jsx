@@ -116,27 +116,34 @@ const features = [
     visible: 'false',
 
   },
-
+  
   {
     id: 11,
-    bean: 'Geisha',
-    profile: 'Fruity, Brown Sugar, Caramel',
-    color: '#000000', // Blue
-    price: '',
-    visible: 'true',
-    tagText: 'Coming soon',
-    tagBg: 'black',
-  },
-  {
-    id: 12,
     bean: 'Brazil Cerrado',
     profile: 'Dark Chocolate, Citrus Acidity, Syrupy Body, Chocolate Flavor & Woody Finish',
     color: '#A52A2A', // Brown
     price: '',
     visible: 'false'
   },
+  
+  {
+    id: 12,
+    bean: 'Nicaragua',
+    profile: ' Jasmine, chocolate, honey, and even black tea',
+    color: '#000000', // Blue
+    price: '',
+    visible: 'false',
+  },
   {
     id: 13,
+    bean: 'Tanzania',
+    profile: ' Jasmine, chocolate, honey, and even black tea',
+    color: '#000000', // Blue
+    price: '',
+    visible: 'false',
+  },
+  {
+    id: 14,
     bean: 'Bukidnon',
     profile: ' Jasmine, chocolate, honey, and even black tea',
     color: '#000000', // Blue
@@ -145,21 +152,16 @@ const features = [
     tagText: 'Coming soon',
     tagBg: 'black',
   },
-  {
-    id: 14,
-    bean: 'Nicaragua',
-    profile: ' Jasmine, chocolate, honey, and even black tea',
-    color: '#000000', // Blue
-    price: '',
-    visible: 'false',
-  },
+  
   {
     id: 15,
-    bean: 'Tanzania',
-    profile: ' Jasmine, chocolate, honey, and even black tea',
+    bean: 'Geisha',
+    profile: 'Fruity, Brown Sugar, Caramel',
     color: '#000000', // Blue
     price: '',
-    visible: 'false',
+    visible: 'true',
+    tagText: 'Coming soon',
+    tagBg: 'black',
   },
   {
     id: 16,
@@ -171,6 +173,7 @@ const features = [
     tagText: 'Blend',
     tagBg: 'brown',
   },
+
   
 ];
 

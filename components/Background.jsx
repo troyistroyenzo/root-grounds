@@ -19,7 +19,7 @@ import {
 const innerMaterial = new THREE.MeshStandardMaterial({
   transparent: true,
   opacity: 1,
-  color: 'black',
+  color: '#E6ECE8',
   roughness: 0,
   side: THREE.FrontSide,
   blending: THREE.AdditiveBlending,
@@ -46,9 +46,12 @@ export default function App() {
       camera={{ position: [100, 100, 300], fov: 50 }}>
       {/** PerfMon will detect performance issues */}
       <PerformanceMonitor onDecline={() => degrade(false)} />
-      <color attach="background" args={['#f0f0f0']} />
+      <color attach="#E6ECE8" args={['#E6ECE8']} />
       <group position={[0, -0.5, 0]} rotation={[0, -0.75, 0]}>
         <Scene />
+        <AccumulativeShadows frames={100} alphaTest={0.85} opacity={0.8} color="red" scale={20} position={[0, -1.805, 0]}>
+          <RandomizedLight amount={8} radius={6} ambient={0.5} intensity={1} position={[-1.5, 2.5, -2.5]} bias={0.001} />
+        </AccumulativeShadows>
       </group>
       <Env perfSucks={perfSucks} />
     </Canvas>
@@ -97,7 +100,7 @@ function Env({ perfSucks }) {
   // Runtime environments can be too slow on some systems, better safe than sorry with PerfMon
   // // preset="city" blur={0.8}
   return (
-     <Environment  resolution={256} background > 
+     <Environment frames={perfSucks ? 1 : Infinity} preset="city" resolution={256} background blur={0.8}>
      
       <group rotation={[Math.PI / 2, 1, 0]}>
         {[2, -2, 2, -4, 2, -5, 2, -9].map((x, i) => (
@@ -105,7 +108,7 @@ function Env({ perfSucks }) {
         ))}
       </group>
       <group ref={ref}>
-        <Lightformer intensity={5} form="ring" color="#F3F3F3" rotation-y={Math.PI / 2} position={[-5, 2, -1]} scale={[10, 10, 1]} />
+        <Lightformer intensity={5} form="ring" color="#E6ECE8" rotation-y={Math.PI / 2} position={[-5, 2, -1]} scale={[10, 10, 1]} />
       </group>
     </Environment>
   )
