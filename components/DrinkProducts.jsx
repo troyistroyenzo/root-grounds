@@ -24,63 +24,42 @@ import { TbChartHistogram, TbCircle1Filled } from 'react-icons/tb';
 import { BiChevronRightCircle, BiCoffeeTogo, BiSolidCoffeeBean } from 'react-icons/bi';
 import { GiCircleCage, GiCoffee, GiCoffeeBeans} from 'react-icons/gi';
 
-const features = [
-    {
-        "id": 1,
-        "bean": "Raw Milk",
-        "profile": "Unpasteurized milk with a rich flavor and higher nutrient content compared to pasteurized milk, offering potential benefits for bone health and digestion.",
-        "color": "#000000",
-        "price": "",
-        "visible": "true",
-        "tagText": "Coming soon",
-        "tagBg": "black"
-      },
-      {
-        "id": 2,
-        "bean": "Kefir",
-        "profile": "A fermented milk drink packed with probiotics for gut health, potentially boosting immunity and aiding digestion.",
-        "color": "#000000",
-        "price": "",
-        "visible": "true",
-        "tagText": "Coming soon",
-        "tagBg": "black"
-      },
-      {
-        "id": 3,
-        "bean": "Sauerkraut",
-        "profile": "Fermented cabbage rich in probiotics, promoting gut health and potentially enhancing immune function and digestion.",
-        "color": "#000000",
-        "price": "",
-        "visible": "true",
-        "tagText": "Coming soon",
-        "tagBg": "black"
-      },
-      {
-        "id": 4,
-        "bean": "Matcha",
-        "profile": "A finely ground green tea powder packed with antioxidants, providing a natural energy boost and potential health benefits.",
-        "color": "#000000",
-        "price": "",
-        "visible": "true",
-        "tagText": "Coming soon",
-        "tagBg": "black"
-      },
-      {
-        "id": 5,
-        "bean": "Coconut Juice",
-        "profile": "Refreshing and hydrating juice from young coconuts, rich in electrolytes and potentially beneficial for skin health and hydration.",
-        "color": "#000000",
-        "price": "",
-        "visible": "true",
-        "tagText": "Coming soon",
-        "tagBg": "black"
-      }
-
+const products = [
+  {
+    "id": 1,
+    "drink": "Raw Milk",
+    "description": "Unpasteurized milk with a rich flavor and higher nutrient content compared to pasteurized milk, offering potential benefits for bone health and digestion.",
+    "image": "https://img.freepik.com/premium-photo/milk-summer-farm-generate-ai_98402-20888.jpg"  // Replace with the actual image path
+  },
+  {
+    "id": 2,
+    "drink": "Kefir",
+    "description": "A fermented milk drink packed with probiotics for gut health, potentially boosting immunity and aiding digestion.",
+    "image": "https://static.vecteezy.com/system/resources/previews/024/062/120/non_2x/a-bottle-of-traditional-russian-kefir-milk-ai-generated-free-photo.jpg"  // Replace with the actual image path
+  },
+  {
+    "id": 3,
+    "drink": "Matcha",
+    "description": "A finely ground green tea powder packed with antioxidants, providing a natural energy boost and potential health benefits.",
+    "image": "https://img.freepik.com/premium-photo/green-matcha-tea-powder-falling-generated-with-ai_147325-1549.jpg"  // Replace with the actual image path
+  },
+  {
+    "id": 4,
+    "drink": "Coconut Juice",
+    "description": "Refreshing and hydrating juice from young coconuts, rich in electrolytes and potentially beneficial for skin health and hydration.",
+    "image": "https://img.freepik.com/premium-photo/refreshing-coconut-juice-minimal-style-ai-generated_804788-34461.jpg"  // Replace with the actual image path
+  },
+  {
+    "id": 5 ,
+    "drink": "Kombucha",
+    "description": "Refreshing and hydrating juice from young coconuts, rich in electrolytes and potentially beneficial for skin health and hydration.",
+    "image": "https://static.vecteezy.com/system/resources/previews/034/972/200/non_2x/ai-generated-generative-ai-homemade-fermented-kombucha-drink-healthy-tea-natural-probiotic-flavored-drink-free-photo.jpg"  // Replace with the actual image path
+  }
 ];
 
-const ProductSimple = ({ food, price, description, image}) => {
+const ProductSimple = ({ food, description, image}) => {
   return (
-    <Center py={12}>
+    <Center py={12} fontFamily={'inter'}>
       <Box
         role={'group'}
         w={'full'}
@@ -122,11 +101,11 @@ const ProductSimple = ({ food, price, description, image}) => {
           />
         </Box>
         <Stack pt={10} align={'center'}>
-          <Heading fontSize={'2xl'} fontFamily={'body'} fontWeight={500}>
+          <Heading fontSize={'2xl'}fontFamily={'Inter-Bold'}  fontWeight={500}>
           {food}
           </Heading>
           <Box p={2} align={'center'}>
-            <Text color={'gray.600'}>
+            <Text>
             {description}
             </Text>
           </Box>
@@ -141,7 +120,7 @@ export default function GridListWithHeading() {
   return (
     <Box>
       <Stack spacing={4} py={1} as={Container} maxW={'6xl'} textAlign={'center'}>
-      <Heading fontSize={'3xl'} color={'black'} fontWeight={'500'} fontFamily={'Inter-Bold'}>Whole Foods</Heading>
+      <Heading fontSize={'3xl'} color={'black'} fontWeight={'500'} fontFamily={'Inter-Bold'}>Drinks</Heading>
         <Text color={'black'} fontFamily={'Inter'} fontSize={'xl'}>
           The best medicine made for man.
         </Text>
@@ -149,19 +128,14 @@ export default function GridListWithHeading() {
       <Stack spacing={4} as={Container} maxW={'2xl'} textAlign={'center'}>
       </Stack>
       <Container fontFamily={'Inter'} maxW={'4xl'} mt={10}>
-        <SimpleGrid columns={{ base: 2, md: 2, lg: 4 }} spacing={5}>
-        <ProductSimple
-            food={'Goat Milk'}
-            description={'Unpasteurized milk with a rich flavor and higher nutrient content compared to pasteurized milk, offering potential benefits for bone health and digestion.'}
-            image={'https://img.freepik.com/premium-photo/milk-summer-farm-generate-ai_98402-20888.jpg'}/>
-             <ProductSimple
-            food={'Kefir'}
-            description={'A fermented milk drink packed with probiotics for gut health, potentially boosting immunity and aiding digestion.'}
-            image={'https://static.vecteezy.com/system/resources/previews/024/062/120/non_2x/a-bottle-of-traditional-russian-kefir-milk-ai-generated-free-photo.jpg'}/>
-             <ProductSimple
-            food={'Sauerkaut'}
-            description={'Fermented cabbage rich in probiotics, promoting gut health and potentially enhancing immune function and digestion.'}
-            image={'https://img.freepik.com/premium-photo/homemade-sauerkraut-jar-generative-ai_641010-16580.jpg'}/>
+        <SimpleGrid columns={{ base: 2, md: 2, lg: 3 }} spacing={5}>
+        {products.map((product) => (
+            <ProductSimple
+            key={product.id}
+            food={product.drink}
+            description={product.description}
+            image={product.image}/>
+          ))}
         </SimpleGrid>
       </Container>
     </Box>

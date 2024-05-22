@@ -177,29 +177,19 @@ const features = [
   
 ];
 
-const Feature = ({ text, icon, iconBg }) => {
-  return (
-    <Stack direction={'row'} align={'center'}>
-      <Flex w={8} h={8} align={'center'} justify={'center'} rounded={'full'} bg={iconBg}>
-        {icon}
-      </Flex>
-      <Text fontFamily={'inter'} fontWeight={600}>{text}</Text>
-    </Stack>
-  )
-}
+
 
 
 export default function GridListWithHeading() {
   return (
-    <Box p={4}>
-      <Stack spacing={4} py={19} as={Container} maxW={'3xl'} textAlign={'center'}>
+    <Box p={5}>
+      <Stack spacing={4} py={19} as={Container} maxW={'lg'} textAlign={'center'}>
       <Heading fontSize={'3xl'} color={'black'} fontWeight={'500'} fontFamily={'Inter-Bold'}>Coffee Beans.</Heading>
         <Text color={'black'} fontFamily={'Inter'} fontSize={'xl'}>
-          The best beans in town... no seriously.
+          Single origin & local beans.
         </Text>
       </Stack>
-      <Stack spacing={4} as={Container} maxW={'2xl'} textAlign={'center'}>
-      <Image
+        <Image
             rounded={'md'}
             alt={'feature image'}
             src={
@@ -208,12 +198,13 @@ export default function GridListWithHeading() {
             objectFit={'fit'}
             objectPosition={'center'}
           />
+      <Stack spacing={4} as={Container} maxW={'2xl'} textAlign={'center'}>
+    
       </Stack>
-      <Container  fontFamily={'Inter'} maxW={'2xl'} mt={10}>
-        <SimpleGrid columns={{ base: 2, md: 2, lg: 4 }} spacing={10}>
+      <Container  fontFamily={'Inter'} maxW={'4xl'} mt={10}>
+        <SimpleGrid columns={{ base: 2, md: 2, lg: 3 }} spacing={10}>
           {features.map((feature) => (
             <HStack key={feature.id} align={'left'}>
-               
               <VStack align={'left'}>
                 <Box columns={{ base: 2, md: 2, lg: 4 }}>
               {feature.visible === 'true' && (

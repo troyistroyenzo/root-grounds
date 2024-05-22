@@ -40,8 +40,8 @@ export default function SimpleAccordion() {
 
   return (
     <Flex
-      minH={'70vh'}
-      py={'30vh'}
+      minH={'30vh'}
+      py={'10vh'}
       align={'center'}
       justify={'center'}>
       <Container>

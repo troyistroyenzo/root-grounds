@@ -8,7 +8,7 @@ const Overlay = () => {
   return (
     <>
       <div className="char"  style={{ top: 70, left: 20, color: '#9C3300', fontSize:'50px', fontFamily: 'Bowlby'}}>
-       ELEVATING THE <br/> MUNDANE
+       ELEVATING THE <br/> MUNDANE <br/> WITH <br/> BETTER COFFEE
       </div>
       <div className="char" style={{ top: '20vw', left: '20vw', color: '#25130F', fontFamily: 'Bowlby'}}>
         <br />
@@ -30,8 +30,8 @@ const Overlay = () => {
         delivered to your doorstep.
         <br /> */}
         <div style={{ position: 'relative', bottom: 150, display: 'inline-block' }}>
-          <a style={{ fontSize: '15px', fontWeight: 900, letterSpacing: 2, color: '#E0FF38' }}> 
-            PRESS ANYWHERE TO ORDER
+          <a style={{ fontSize: '15px', fontWeight: 900, letterSpacing: 2, color: '#000000' }}> 
+            PRESS THE COFFEE BAG TO ORDER
           </a>
           <div style={{ marginTop: 6, height: 2.5, width: '100%', background: '#3e3e3d' }} />
         </div>

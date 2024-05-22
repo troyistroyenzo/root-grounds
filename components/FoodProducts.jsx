@@ -24,44 +24,44 @@ import { TbChartHistogram, TbCircle1Filled } from 'react-icons/tb';
 import { BiChevronRightCircle, BiCoffeeTogo, BiSolidCoffeeBean } from 'react-icons/bi';
 import { GiCircleCage, GiCoffee, GiCoffeeBeans} from 'react-icons/gi';
 
-const features = [
+const products = [
     {
         "id": 1,
-        "bean": "Sourdough",
-        "profile": "A tangy and flavorful bread made through a slow fermentation process, known for its digestive benefits and unique taste.",
-        "color": "#000000",
-        "price": "",
-        "visible": "true",
-        "tagText": "Coming soon",
-        "tagBg": "black"
+        "food": "Sourdough",
+        "description": "A tangy and flavorful bread made through a slow fermentation process, known for its digestive benefits and unique taste.",
+        "image" : "https://homesteadandchill.com/wp-content/uploads/2019/02/simple-sourdough-bread-recipe-homestead-feature.jpeg",
       },
       {
         "id": 2,
-        "bean": "Honey",
-        "profile": "A natural sweetener with various health benefits, including antioxidants and soothing properties for throat health.",
-        "color": "#000000",
-        "price": "",
-        "visible": "true",
-        "tagText": "Coming soon",
-        "tagBg": "black"
+        "food": "Honey",
+        "description": "A natural sweetener with various health benefits, including antioxidants and soothing properties for throat health.",
+        "image" : "https://img.freepik.com/premium-photo/honey-jar_920207-7369.jpg"
       },
       {
         "id": 3,
-        "bean": "Raw Cheese",
-        "profile": "A nutrient-rich cheese made from unpasteurized milk, preserving its natural enzymes and probiotics for digestive health.",
-        "color": "#000000",
-        "price": "",
-        "visible": "true",
-        "tagText": "Coming soon",
-        "tagBg": "black"
+        "food": "Feta Cheese",
+        "description": "A nutrient-rich cheese made from unpasteurized milk, preserving its natural enzymes and probiotics for digestive health.",
+        "image" : "https://img.freepik.com/premium-photo/mediterranean-feta-cheese-generative-ai_94628-14968.jpg",
+      },
+      {
+        "id": 4,
+        "food": "Kimchi",
+        "description": " rich in probiotics, vitamins, and antioxidants, supporting gut health, boosting immunity, and enhancing overall well-being.",
+        "image" : "https://img.freepik.com/premium-photo/ai-generated-homemade-traditional-korean-kimchi-cuisine-fermented-vegetables-food-with-various-spices-everyday-meal_858705-286.jpg",
+      },
+      {
+        "id": 5,
+        "food": "Sauerkraut",
+        "description": "Fermented cabbage rich in probiotics, promoting gut health and potentially enhancing immune function and digestion.",
+        "image": "https://img.freepik.com/premium-photo/homemade-sauerkraut-jar-generative-ai_641010-16580.jpg"  // Replace with the actual image path
       },
 
 ];
 
 
-const ProductSimple = ({ food, price, description, image}) => {
+const ProductSimple = ({ food, description, image}) => {
   return (
-    <Center py={12}>
+    <Center py={12} fontFamily={'inter'}>
       <Box
         role={'group'}
         w={'full'}
@@ -103,11 +103,11 @@ const ProductSimple = ({ food, price, description, image}) => {
           />
         </Box>
         <Stack pt={10} align={'center'}>
-          <Heading fontSize={'2xl'} fontFamily={'body'} fontWeight={500}>
+          <Heading fontSize={'2xl'}fontFamily={'Inter-Bold'}  fontWeight={500}>
           {food}
           </Heading>
           <Box p={2} align={'center'}>
-            <Text color={'gray.600'}>
+            <Text>
             {description}
             </Text>
           </Box>
@@ -124,24 +124,22 @@ export default function GridListWithHeading() {
       <Stack spacing={4} py={1} as={Container} maxW={'6xl'} textAlign={'center'}>
       <Heading fontSize={'3xl'} color={'black'} fontWeight={'500'} fontFamily={'Inter-Bold'}>Whole Foods</Heading>
         <Text color={'black'} fontFamily={'Inter'} fontSize={'xl'}>
-          Sugar-free, soy-free, gluten-free: junk free produce that you need!
+          You are what you eat, so eat better foods. 😉
         </Text>
       </Stack>
       <Stack spacing={4} as={Container} maxW={'2xl'} textAlign={'center'}>
       </Stack>
       <Container fontFamily={'Inter'} maxW={'4xl'} mt={10}>
-        <SimpleGrid columns={{ base: 2, md: 2, lg: 4 }} spacing={5}>
-          {/* {features.map((feature) => (
-            
-          ))} */}
-          <ProductSimple
-            food={'Sourdough'}
-            description={'Sourdough bread is lower in glycemic index compared to other breads, making it beneficial for blood sugar control.'}
-            image={'https://homesteadandchill.com/wp-content/uploads/2019/02/simple-sourdough-bread-recipe-homestead-feature.jpeg'}/>
+        <SimpleGrid columns={{ base: 2, md: 2, lg: 3 }} spacing={5}>
+          {products.map((product) => (
             <ProductSimple
-            food={'Honey'}
-            description={'Honey is a natural sweetener rich in antioxidants, which help reduce inflammation and support immune health.'}
-            image={'https://img.freepik.com/premium-photo/honey-jar_920207-7369.jpg'}/>
+            key={product.id}
+            food={product.food}
+            description={product.description}
+            image={product.image}/>
+          ))}
+     
+            
         </SimpleGrid>
       </Container>
     </Box>

@@ -8,6 +8,7 @@ import FAQ from "@/components/FAQ"
 import Newsletter from "@/components/Newsletter"
 import FoodProducts from "@/components/FoodProducts"
 import DrinkProducts from "@/components/DrinkProducts"
+import AthleticProducts from "@/components/AthleticProducts"
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
     {/* <Newsletter/> */}
     <FoodProducts/>
     <DrinkProducts/>
+    <AthleticProducts/>
     <About/>
     <FAQ/>
     </>
