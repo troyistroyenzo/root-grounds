@@ -8,7 +8,7 @@ const Overlay = () => {
   return (
     <>
       <div className="char"  style={{ top: 70, left: 20, color: '#9C3300', fontSize:'50px', fontFamily: 'Bowlby'}}>
-       ELEVATING THE <br/> MUNDANE <br/> WITH <br/> BETTER COFFEE
+      
       </div>
       <div className="char" style={{ top: '20vw', left: '20vw', color: '#25130F', fontFamily: 'Bowlby'}}>
         <br />
@@ -20,7 +20,7 @@ const Overlay = () => {
       <div className="char" style={{ bottom: 40, left: '40vw', fontFamily: 'Bowlby' }}></div>
       <div style={{ position: 'absolute', top: -20, right: 20 , textAlign: 'right', fontVariantNumeric: 'tabular-nums' }}>
         
-        <Image src={Logo} alt="Logo" />
+       
       </div>
       <div style={{ position: 'absolute', bottom: 170, left: 60, fontSize: '15px', color: 'black',}}>
       {/* One-stop-shop FOR

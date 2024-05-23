@@ -105,7 +105,7 @@ const ProductSimple = ({ food, description, image}) => {
 
 export default function GridListWithHeading() {
   return (
-    <Box>
+    <Box bg={'#E6ECE8'} >
       <Stack spacing={4} py={1} as={Container} maxW={'6xl'} textAlign={'center'}>
       <Heading fontSize={'3xl'} color={'black'} fontWeight={'500'} fontFamily={'Inter-Bold'}>Athletic Greens</Heading>
         <Text color={'black'} fontFamily={'Inter'} fontSize={'xl'}>

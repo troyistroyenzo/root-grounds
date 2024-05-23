@@ -41,7 +41,7 @@ const Feature = ({ subtext, text, icon, iconBg, label }) => {
 
 export default function SplitWithImage() {
   return (
-    <Container maxW={'4xl'} py={10}>
+    <Container bg={'#E6ECE8'} maxW={'4xl'} py={10}>
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={100}>
         <Stack spacing={4}>
           <Heading color={'black'} fontWeight={'600'} fontSize={'4xl'} fontFamily={'Inter-bold'} >What is Root & Grounds?</Heading>
@@ -109,3 +109,4 @@ export default function SplitWithImage() {
     
   )
 }
+

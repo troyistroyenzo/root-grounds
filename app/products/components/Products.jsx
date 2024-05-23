@@ -182,7 +182,7 @@ const features = [
 
 export default function GridListWithHeading() {
   return (
-    <Box p={5}>
+    <Box p={5} bg={'#E6ECE8'} >
       <Stack spacing={4} py={19} as={Container} maxW={'lg'} textAlign={'center'}>
       <Heading fontSize={'3xl'} color={'black'} fontWeight={'500'} fontFamily={'Inter-Bold'}>Coffee Beans.</Heading>
         <Text color={'black'} fontFamily={'Inter'} fontSize={'xl'}>

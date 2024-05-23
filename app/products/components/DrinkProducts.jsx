@@ -4,7 +4,6 @@ import {
   Box,
   Container,
   Heading,
-  Center,
   SimpleGrid,
   Icon,
   Text,
@@ -13,6 +12,7 @@ import {
   VStack,
   Flex,
   Image,
+  Center,
   useColorModeValue,
   Tag,
   StackDivider,
@@ -25,39 +25,37 @@ import { BiChevronRightCircle, BiCoffeeTogo, BiSolidCoffeeBean } from 'react-ico
 import { GiCircleCage, GiCoffee, GiCoffeeBeans} from 'react-icons/gi';
 
 const products = [
-    {
-        "id": 1,
-        "food": "Sourdough",
-        "description": "A tangy and flavorful bread made through a slow fermentation process, known for its digestive benefits and unique taste.",
-        "image" : "https://homesteadandchill.com/wp-content/uploads/2019/02/simple-sourdough-bread-recipe-homestead-feature.jpeg",
-      },
-      {
-        "id": 2,
-        "food": "Honey",
-        "description": "A natural sweetener with various health benefits, including antioxidants and soothing properties for throat health.",
-        "image" : "https://img.freepik.com/premium-photo/honey-jar_920207-7369.jpg"
-      },
-      {
-        "id": 3,
-        "food": "Feta Cheese",
-        "description": "A nutrient-rich cheese made from unpasteurized milk, preserving its natural enzymes and probiotics for digestive health.",
-        "image" : "https://img.freepik.com/premium-photo/mediterranean-feta-cheese-generative-ai_94628-14968.jpg",
-      },
-      {
-        "id": 4,
-        "food": "Kimchi",
-        "description": " rich in probiotics, vitamins, and antioxidants, supporting gut health, boosting immunity, and enhancing overall well-being.",
-        "image" : "https://img.freepik.com/premium-photo/ai-generated-homemade-traditional-korean-kimchi-cuisine-fermented-vegetables-food-with-various-spices-everyday-meal_858705-286.jpg",
-      },
-      {
-        "id": 5,
-        "food": "Sauerkraut",
-        "description": "Fermented cabbage rich in probiotics, promoting gut health and potentially enhancing immune function and digestion.",
-        "image": "https://img.freepik.com/premium-photo/homemade-sauerkraut-jar-generative-ai_641010-16580.jpg"  // Replace with the actual image path
-      },
-
+  {
+    "id": 1,
+    "drink": "Raw Milk",
+    "description": "Unpasteurized milk with a rich flavor and higher nutrient content compared to pasteurized milk, offering potential benefits for bone health and digestion.",
+    "image": "https://img.freepik.com/premium-photo/milk-summer-farm-generate-ai_98402-20888.jpg"  // Replace with the actual image path
+  },
+  {
+    "id": 2,
+    "drink": "Kefir",
+    "description": "A fermented milk drink packed with probiotics for gut health, potentially boosting immunity and aiding digestion.",
+    "image": "https://static.vecteezy.com/system/resources/previews/024/062/120/non_2x/a-bottle-of-traditional-russian-kefir-milk-ai-generated-free-photo.jpg"  // Replace with the actual image path
+  },
+  {
+    "id": 3,
+    "drink": "Matcha",
+    "description": "A finely ground green tea powder packed with antioxidants, providing a natural energy boost and potential health benefits.",
+    "image": "https://img.freepik.com/premium-photo/green-matcha-tea-powder-falling-generated-with-ai_147325-1549.jpg"  // Replace with the actual image path
+  },
+  {
+    "id": 4,
+    "drink": "Coconut Juice",
+    "description": "Refreshing and hydrating juice from young coconuts, rich in electrolytes and potentially beneficial for skin health and hydration.",
+    "image": "https://img.freepik.com/premium-photo/refreshing-coconut-juice-minimal-style-ai-generated_804788-34461.jpg"  // Replace with the actual image path
+  },
+  {
+    "id": 5 ,
+    "drink": "Kombucha",
+    "description": "Refreshing and hydrating juice from young coconuts, rich in electrolytes and potentially beneficial for skin health and hydration.",
+    "image": "https://static.vecteezy.com/system/resources/previews/034/972/200/non_2x/ai-generated-generative-ai-homemade-fermented-kombucha-drink-healthy-tea-natural-probiotic-flavored-drink-free-photo.jpg"  // Replace with the actual image path
+  }
 ];
-
 
 const ProductSimple = ({ food, description, image}) => {
   return (
@@ -120,26 +118,24 @@ const ProductSimple = ({ food, description, image}) => {
 
 export default function GridListWithHeading() {
   return (
-    <Box>
+    <Box bg={'#E6ECE8'} >
       <Stack spacing={4} py={1} as={Container} maxW={'6xl'} textAlign={'center'}>
-      <Heading fontSize={'3xl'} color={'black'} fontWeight={'500'} fontFamily={'Inter-Bold'}>Whole Foods</Heading>
+      <Heading fontSize={'3xl'} color={'black'} fontWeight={'500'} fontFamily={'Inter-Bold'}>Drinks</Heading>
         <Text color={'black'} fontFamily={'Inter'} fontSize={'xl'}>
-          You are what you eat, so eat better foods. 😉
+          The best medicine made for man.
         </Text>
       </Stack>
       <Stack spacing={4} as={Container} maxW={'2xl'} textAlign={'center'}>
       </Stack>
       <Container fontFamily={'Inter'} maxW={'4xl'} mt={10}>
         <SimpleGrid columns={{ base: 2, md: 2, lg: 3 }} spacing={5}>
-          {products.map((product) => (
+        {products.map((product) => (
             <ProductSimple
             key={product.id}
-            food={product.food}
+            food={product.drink}
             description={product.description}
             image={product.image}/>
           ))}
-     
-            
         </SimpleGrid>
       </Container>
     </Box>

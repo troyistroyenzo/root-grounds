@@ -4,6 +4,7 @@ import { ThemeProvider, ColorModeProvider } from "@chakra-ui/react"
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/Footer"
+import Navbar from "@/components/Navbar"
 import Head from 'next/head';
 import dynamic from "next/dynamic"; 
 import { Analytics } from "@vercel/analytics/react"
@@ -34,7 +35,10 @@ export default function RootLayout({
       <body className={inter.className}>
     <CrispWithNoSSR />
     <ChakraProvider>
-      {children}
+      <header>
+        <Navbar />
+      </header>
+        {children}
       <footer>
         <Footer />
       </footer>

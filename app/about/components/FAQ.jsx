@@ -40,6 +40,7 @@ export default function SimpleAccordion() {
 
   return (
     <Flex
+    bg={'#E6ECE8'} 
       minH={'30vh'}
       py={'10vh'}
       align={'center'}
