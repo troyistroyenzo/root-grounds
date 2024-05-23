@@ -1,6 +1,6 @@
 
-import About from ".@/components/About"
-import FAQ from "@/components/FAQ"
+import About from "./components/About"
+import FAQ from "./components/FAQ"
 
 
 export default function Home() {
@@ -9,6 +9,7 @@ export default function Home() {
 
     <About/>
     <FAQ/>
+    
     </>
   );
 }

@@ -7,12 +7,12 @@ import AthleticProducts from "./components/AthleticProducts"
 export default function Home() {
   return (
     <>
-    <div>
+    
     <Products/>
     <FoodProducts/>
     <DrinkProducts/>
     <AthleticProducts/>
-    </div>
+    
     
 
     </>
