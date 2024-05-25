@@ -34,7 +34,7 @@ export default function WithSubnavigation() {
       <Flex
         bg={useColorModeValue('white', 'gray.800')}
         color={useColorModeValue('gray.600', 'white')}
-        minH={'60px'}
+        maxH={'10vh'}
         py={{ base: 2 }}
         px={{ base: 4 }}
         borderBottom={1}
@@ -55,7 +55,7 @@ export default function WithSubnavigation() {
         <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
           <Text
             textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
-            fontFamily={'heading'}
+            fontFamily={'inter'}
             color={useColorModeValue('gray.800', 'white')}>
          
 
@@ -166,7 +166,7 @@ const DesktopSubNav = ({ label, href, subLabel }) => {
         </Flex>
       </Stack>
     </Box>
-  )
+  ) 
 }
 
 const MobileNav = () => {

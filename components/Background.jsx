@@ -1,20 +1,11 @@
 "use client"
 
 import * as THREE from 'three'
-import { useRef, useState, useEffect } from 'react'
+import { useRef, useState, useEffect, useMemo } from 'react'
 import { easing } from 'maath'
 import { Canvas, useFrame } from '@react-three/fiber'
-import {
-  useGLTF,
-  Center,
-  Caustics,
-  Environment,
-  Lightformer,
-  RandomizedLight,
-  PerformanceMonitor,
-  AccumulativeShadows,
-  MeshTransmissionMaterial
-} from '@react-three/drei'
+import { useGLTF, Center, Caustics, Environment, Lightformer, RandomizedLight, PerformanceMonitor, AccumulativeShadows, MeshTransmissionMaterial } from '@react-three/drei'
+import { Suspense } from 'react'
 
 const innerMaterial = new THREE.MeshStandardMaterial({
   transparent: true,
@@ -32,7 +23,6 @@ export default function App() {
   const [perfSucks, degrade] = useState(false)
   
   useEffect(() => {
-    // Check if document is defined (browser environment)
     if (typeof document !== 'undefined') {
       // Access document and perform necessary operations here
     }
@@ -40,31 +30,30 @@ export default function App() {
   
   return (
     <a style={{ fontSize: '25px', fontWeight: 900, letterSpacing: 2 }} href="https://form.jotform.com/rootandgrounds/order-form" target='_blank'> 
-    <Canvas
-      shadows
-      dpr={[1, perfSucks ? 1.5 : 2]}
-      camera={{ position: [100, 100, 300], fov: 50 }}>
-      {/** PerfMon will detect performance issues */}
-      <PerformanceMonitor onDecline={() => degrade(false)} />
-      <color attach="#E6ECE8" args={['#E6ECE8']} />
-      <group position={[0, -0.5, 0]} rotation={[0, -0.75, 0]}>
-        <Scene />
-        <AccumulativeShadows frames={100} alphaTest={0.85} opacity={0.8} color="red" scale={20} position={[0, -1.805, 0]}>
-          <RandomizedLight amount={8} radius={6} ambient={0.5} intensity={1} position={[-1.5, 2.5, -2.5]} bias={0.001} />
-        </AccumulativeShadows>
-      </group>
-      <Env perfSucks={perfSucks} />
-    </Canvas>
+      <Canvas
+        shadows
+        dpr={[1, perfSucks ? 1.5 : 2]}
+        camera={{ position: [100, 100, 300], fov: 50 }}>
+        <PerformanceMonitor onDecline={() => degrade(false)} />
+        <color attach="background" args={['#E6ECE8']} />
+        <Suspense fallback={null}>
+          <group position={[0, -0.5, 0]} rotation={[0, -0.75, 0]}>
+            <Scene />
+            <AccumulativeShadows frames={100} alphaTest={0.85} opacity={0.8} color="red" scale={20} position={[0, -1.805, 0]}>
+              <RandomizedLight amount={8} radius={6} ambient={0.5} intensity={1} position={[-1.5, 2.5, -2.5]} bias={0.001} />
+            </AccumulativeShadows>
+          </group>
+          <Env perfSucks={perfSucks} />
+        </Suspense>
+      </Canvas>
     </a>
   )
 }
 
 function Scene(props) {
-  // const { nodes, materials } = useGLTF('/glass-transformed.glb')
   const { nodes, materials } = useGLTF('coffee.glb')
   return (
     <group {...props} dispose={null}>
-      {/* <mesh castShadow receiveShadow geometry={nodes.glass.geometry} material={materials.glass} /> */}
       <mesh
         castShadow
         receiveShadow
@@ -72,7 +61,7 @@ function Scene(props) {
         material={materials.Object001_mtl}
         position={[0.6, 0.7, 0]}
         scale={[0.15, 0.15, 0.15]}
-        rotation={[-1.5, 0.2, 0.1]} // Adjust scale as needed
+        rotation={[-1.5, 0.2, 0.1]} 
       />
     </group>
   )
@@ -87,21 +76,14 @@ function Env({ perfSucks }) {
       const x = state.pointer.x
       const y = state.pointer.y
 
-      // Smoothly animate rotation of the environment
       easing.damp3(ref.current.rotation, [Math.PI / 2, 0, time + x], 0.2, delta)
-
-      // Smoothly animate camera position
       easing.damp3(state.camera.position, [Math.sin(x / 4) * 9, 1.25 + y, Math.cos(x / 4) * 9], 0.5, delta)
-
-      // Make the camera look at the center of the scene
       state.camera.lookAt(0, 0, 0)
     }
   })
-  // Runtime environments can be too slow on some systems, better safe than sorry with PerfMon
-  // // preset="city" blur={0.8}
+
   return (
-     <Environment frames={perfSucks ? 1 : Infinity} preset="city" resolution={256} background blur={0.8}>
-     
+    <Environment frames={perfSucks ? 1 : Infinity} preset="city" resolution={256} background blur={0.8}>
       <group rotation={[Math.PI / 2, 1, 0]}>
         {[2, -2, 2, -4, 2, -5, 2, -9].map((x, i) => (
           <Lightformer key={i} intensity={1} rotation={[Math.PI / 4, 0, 0]} position={[x, 4, i * 4]} scale={[4, 1, 1]} />
