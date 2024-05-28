@@ -28,6 +28,7 @@ const products = [
     {
         "id": 1,
         "food": "Sourdough",
+        "price" : "₱489 / kg",
         "description": "A tangy and flavorful bread made through a slow fermentation process, known for its digestive benefits and unique taste.",
         "image" : "https://homesteadandchill.com/wp-content/uploads/2019/02/simple-sourdough-bread-recipe-homestead-feature.jpeg",
       },
@@ -54,12 +55,12 @@ const products = [
         "food": "Sauerkraut",
         "description": "Fermented cabbage rich in probiotics, promoting gut health and potentially enhancing immune function and digestion.",
         "image": "https://img.freepik.com/premium-photo/homemade-sauerkraut-jar-generative-ai_641010-16580.jpg"  // Replace with the actual image path
-      },
+      }, 
 
 ];
 
 
-const ProductSimple = ({ food, description, image}) => {
+const ProductSimple = ({ food, description, image, price}) => {
   return (
     <Center py={12} fontFamily={'inter'}>
       <Box
@@ -106,12 +107,22 @@ const ProductSimple = ({ food, description, image}) => {
           <Heading fontSize={'2xl'}fontFamily={'Inter-Bold'}  fontWeight={500}>
           {food}
           </Heading>
+          <Stack direction={'row'} align={'center'}>
+            <Text fontWeight={600} fontSize={'xl'}>
+            {price}
+            </Text>
+            {/* <Text textDecoration={'line-through'} color={'gray.600'}>
+              $199
+            </Text> */}
+          </Stack>
+        </Stack>
+
           <Box p={2} align={'center'}>
             <Text>
             {description}
             </Text>
           </Box>
-        </Stack>
+
       </Box>
     </Center>
   )
@@ -136,7 +147,8 @@ export default function GridListWithHeading() {
             key={product.id}
             food={product.food}
             description={product.description}
-            image={product.image}/>
+            image={product.image}
+            price={product.price}/>
           ))}
      
             

@@ -29,7 +29,7 @@ const features = [
     bean: 'Brazil Santos',
     profile: 'Chocolate Aroma, Smooth Body, Mild Acidity, Bakers Chocolate',
     color: '#A52A2A', // Brown
-    price: '',
+    price: '₱250 (250g)',
     tagText: 'Best Seller',
     tagBg: 'green.300',
     visible: 'true'
@@ -39,7 +39,7 @@ const features = [
     bean: 'Ethiopia Sidamo',
     profile: 'Jasmine Flower Aroma, Juicy Body, Lemon Acidity, Clean Finish',
     color: '#0000FF', // Blue
-    price: '',
+    price: '₱730 (250g)',
     tagText: 'Best Seller',
     tagBg: 'green.300',
     visible: 'true',
@@ -49,7 +49,7 @@ const features = [
     bean: 'Colombia',
     profile: 'Sweet and Nutty Aroma, Mild Acidity, Chocolate Finish, Nutty Aftertaste',
     color: '#008000', // Green
-    price: '',
+    price: '₱670 (250g)',
     tagText: 'Best Seller',
     tagBg: 'green.300',
     visible: 'true'
@@ -59,7 +59,7 @@ const features = [
     bean: 'Vietnam',
     profile: 'Burnt Wood and Nutty Aroma, Mild Acidity, Medium Body, Nutty and Wood Notes w hint of Cacao Nibs',
     color: '#0000FF', // Blue
-    price: '',
+    price: '₱450 (250g)',
     visible: 'true',
     tagText: 'Best seller',
     tagBg: 'green.300',
@@ -69,17 +69,17 @@ const features = [
     bean: 'Mt. Apo',
     profile: 'Chocolate, citrus, nutty, fruity, floral, caramel, spice.',
     color: '#A52A2A', // Brown
-    price: '',
+    price: '₱460 (250g)',
     visible: 'true',
     tagText: 'Best seller',
     tagBg: 'green.300',
   },
   {
     id: 6,
-    bean: 'Guatemala',
+    bean: 'Guatemala Huehuetenango',
     profile: 'Orange Aroma, Smooth Body, Mild Acidity, Orange Notes',
     color: '#FFA500', // Orange
-    price: '',
+    price: '₱600 (250g)',
     visible: 'false'
   },
   {
@@ -87,7 +87,7 @@ const features = [
     bean: 'Brazil Dutra',
     profile: 'Caramel Aroma, Citrus Acidity, Syrupy Body, Chocolate Flavor & Finish',
     color: '#FFA500', // Orange
-    price: '',
+    price: '₱630 (250g)',
     tagText: '',
     tagBg: 'yellow.300',
     visible: 'false'
@@ -97,7 +97,7 @@ const features = [
     bean: 'El Salvador',
     profile: 'Caramel Aroma, Grapefruit citrus Acidity, Caramel and Dark Chocolate Notes',
     color: '#008000', // Green
-    price: '',
+    price: '₱730 (250g)',
 
   },
   {
@@ -105,14 +105,14 @@ const features = [
     bean: 'Ethiopia Masha',
     profile: 'Fruity Aroma, Bright Acidity, Berries Flavor, Chocolate Finish',
     color: '#008000', // Green
-    price: '',
+    price: '₱1000 (250g)',
   },
   {
     id: 10,
     bean: 'Burundi Lampibo',
     profile: 'Slick Body, Dense Citrus Acidity, GrapeFruit and Peach Sweetness',
     color: '#008000', // Green
-    price: '',
+    price: '₱710 (250g)',
     visible: 'false',
 
   },
@@ -122,7 +122,7 @@ const features = [
     bean: 'Brazil Cerrado',
     profile: 'Dark Chocolate, Citrus Acidity, Syrupy Body, Chocolate Flavor & Woody Finish',
     color: '#A52A2A', // Brown
-    price: '',
+    price: '₱550 (250g)',
     visible: 'false'
   },
   
@@ -131,7 +131,7 @@ const features = [
     bean: 'Nicaragua',
     profile: ' Jasmine, chocolate, honey, and even black tea',
     color: '#000000', // Blue
-    price: '',
+    price: '₱660 (250g)',
     visible: 'false',
   },
   {
@@ -139,7 +139,7 @@ const features = [
     bean: 'Tanzania',
     profile: ' Jasmine, chocolate, honey, and even black tea',
     color: '#000000', // Blue
-    price: '',
+    price: '₱610 (250g)',
     visible: 'false',
   },
   {
@@ -220,7 +220,7 @@ export default function GridListWithHeading() {
                 </Box>
                 <Text fontWeight={500} fontSize={'2xl'}>{feature.bean}
                 </Text>
-                <Text fontWeight={400} fontSize={'lg'}>{feature.price}</Text>
+                <Text fontWeight={800} fontSize={'sm'}>{feature.price}</Text>
                 <Text color={'black'} fontSize={'sm'}>{feature.profile}</Text>
                 
               </VStack>
