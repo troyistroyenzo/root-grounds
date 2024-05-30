@@ -14,10 +14,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Root & Grounds",
   description: "Elevate the mundane with better coffee, better foods",
-  twitter: "https://res.cloudinary.com/dlgyqy69b/image/upload/v1712558514/Add_a_heading_ksvt7f.png",
-  card: "summary_image_large",
-  site: "@site",
-  creator: "@creator", "images": "https://res.cloudinary.com/dlgyqy69b/image/upload/v1712558514/Add_a_heading_ksvt7f.png"
+  creator: "@creator", 
 }
 
 const CrispWithNoSSR = dynamic(() => import("@/components/Crisp"), { ssr: false }); // Load with no SSR

@@ -35,11 +35,11 @@ export default function App() {
         dpr={[1, perfSucks ? 1.5 : 2]}
         camera={{ position: [100, 100, 300], fov: 50 }}>
         <PerformanceMonitor onDecline={() => degrade(false)} />
-        <color attach="background" args={['#E6ECE8']} />
+        <color attach="background" args={['#F8F8F8']} />
         <Suspense fallback={null}>
           <group position={[0, -0.5, 0]} rotation={[0, -0.75, 0]}>
             <Scene />
-            <AccumulativeShadows frames={100} alphaTest={0.85} opacity={0.8} color="red" scale={20} position={[0, -1.805, 0]}>
+            <AccumulativeShadows frames={100} alphaTest={0.85} opacity={0.1} color="white" scale={20} position={[0, -1.805, 0]}>
               <RandomizedLight amount={8} radius={6} ambient={0.5} intensity={1} position={[-1.5, 2.5, -2.5]} bias={0.001} />
             </AccumulativeShadows>
           </group>
