@@ -28,43 +28,43 @@ const products = [
   {
     id: 1,
     food: 'Brazil Santos',
-    price: '₱730 (250g)',
+    price: '₱589  ',
     image: "https://res.cloudinary.com/dlgyqy69b/image/upload/v1718341397/ground_jcyoii.png",
   },
   {
     id: 2,
     food: 'Ethiopia Sidamo',
-    price: '₱730 (250g)',
+    price: '₱719 ',
     image: "https://res.cloudinary.com/dlgyqy69b/image/upload/v1718341373/ground_3_zvax8p.png",
   },
   {
     id: 3,
     food: 'Colombia',
-    price: '₱670 (250g)',
+    price: '₱649  ',
     image: "https://res.cloudinary.com/dlgyqy69b/image/upload/v1718341372/ground_2_uk1ci3.png",
   },
   {
     id: 4,
     food: 'Vietnam',
-    price: '₱450 (250g)',
+    price: '₱439  ',
     image: "https://res.cloudinary.com/dlgyqy69b/image/upload/v1718341373/ground_4_z2bhiz.png",
   },
   {
     id: 5,
     food: 'Mt. Apo',
-    price: '₱460 (250g)',
+    price: '₱448  ',
     image: "https://res.cloudinary.com/dlgyqy69b/image/upload/v1718341397/ground_5_cwpx9d.png",
   },
   {
     id: 6,
     food: 'Bukidnon',
-    price: '₱600 (250g)',
+    price: '₱468',
     image: "https://res.cloudinary.com/dlgyqy69b/image/upload/v1718341374/ground_6_cyappp.png",
   },
   {
     id: 7,
     food: 'Mindanao Blend',
-    price: '₱630 (250g)',
+    price: '₱1300 (1kg)',
     image: "https://res.cloudinary.com/dlgyqy69b/image/upload/v1718341374/ground_7_xnwnkn.png",
   },
   
@@ -73,7 +73,7 @@ const products = [
   //   bean: 'El Salvador',
   //   profile: 'Caramel Aroma, Grapefruit citrus Acidity, Caramel and Dark Chocolate Notes',
   //   color: '#008000', // Green
-  //   price: '₱730 (250g)',
+  //   price: '₱730  ',
 
   // },
   // {
@@ -81,14 +81,14 @@ const products = [
   //   bean: 'Ethiopia Masha',
   //   profile: 'Fruity Aroma, Bright Acidity, Berries Flavor, Chocolate Finish',
   //   color: '#008000', // Green
-  //   price: '₱1000 (250g)',
+  //   price: '₱1000  ',
   // },
   // {
   //   id: 10,
   //   bean: 'Burundi Lampibo',
   //   profile: 'Slick Body, Dense Citrus Acidity, GrapeFruit and Peach Sweetness',
   //   color: '#008000', // Green
-  //   price: '₱710 (250g)',
+  //   price: '₱710  ',
   //   visible: 'false',
 
   // },
@@ -97,7 +97,7 @@ const products = [
   //   bean: 'Brazil Cerrado',
   //   profile: 'Dark Chocolate, Citrus Acidity, Syrupy Body, Chocolate Flavor & Woody Finish',
   //   color: '#A52A2A', // Brown
-  //   price: '₱550 (250g)',
+  //   price: '₱550  ',
   //   visible: 'false'
   // },
   
@@ -106,7 +106,7 @@ const products = [
   //   bean: 'Nicaragua',
   //   profile: ' Jasmine, chocolate, honey, and even black tea',
   //   color: '#000000', // Blue
-  //   price: '₱660 (250g)',
+  //   price: '₱660  ',
   //   visible: 'false',
   // },
   // {
@@ -114,7 +114,7 @@ const products = [
   //   bean: 'Tanzania',
   //   profile: ' Jasmine, chocolate, honey, and even black tea',
   //   color: '#000000', // Blue
-  //   price: '₱610 (250g)',
+  //   price: '₱610  ',
   //   visible: 'false',
   // },
   // {
@@ -156,7 +156,7 @@ const products = [
 
 const ProductSimple = ({ food, description, image, price}) => {
   return (
-    <Center py={12} fontFamily={'inter'}>
+    <Center py={5} fontFamily={'inter'}>
       <Box
         role={'group'}
         w={'full'}
@@ -188,16 +188,15 @@ const ProductSimple = ({ food, description, image, price}) => {
             },
           }}>
           <Image
-            rounded={'lg'}
             objectFit={'cover'}
             src={image}
-            alt="#"
+            alt="coffee flavor single origin label"
           />
         </Box>
         <Stack pt={10} align={'center'}>
           <Stack direction={'column'} align={'center'}>
-            <Text fontWeight={600} fontSize={'xl'}>
-            {price}
+            <Text fontWeight={600} fontSize={'sm'}>
+            From {price}
             </Text>
             {/* <Text textDecoration={'line-through'} color={'gray.600'}>
               $199
@@ -220,14 +219,14 @@ const ProductSimple = ({ food, description, image, price}) => {
 export default function GridListWithHeading() {
   return (
     <Box bg={'#E6ECE8'} >
+      <Container fontFamily={'Inter'} maxW={'4xl'} p={5}>
       <Stack spacing={4} py={10} as={Container} maxW={'6xl'} textAlign={'center'}>
-      <Heading fontSize={'3xl'} color={'black'} fontWeight={'500'} fontFamily={'Inter-Bold'}>Whole Foods</Heading>
-        <Text color={'black'} fontFamily={'Inter'} fontSize={'xl'}>
+      <Heading fontSize={'3xl'} color={'black'} fontWeight={'500'} fontFamily={'Inter-Bold'}>Coffee Beans</Heading>
+        <Text color={'black'} fontFamily={'Inter'} fontSize={'xl'} >
           Single origin & local coffee beans.
         </Text>
       </Stack>
-      <Container fontFamily={'Inter'} maxW={'4xl'} mt={100} p={10}>
-        <SimpleGrid columns={{ base: 2, md: 2, lg: 3 }} spacing={10}>
+        <SimpleGrid columns={{ base: 2, md: 2, lg: 3 }} spacing={10} mt={10}>
           {products.map((product) => (
             <ProductSimple
             key={product.id}
