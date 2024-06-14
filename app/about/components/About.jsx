@@ -42,7 +42,7 @@ const Feature = ({ subtext, text, icon, iconBg, label }) => {
 
 export default function SplitWithImage() {
   return (
-    <Container bg={'#E6ECE8'} maxWidth={'100%'} p={100}>
+    <Container bg={'#E6ECE8'} maxWidth={'100%'} p={10} py={100}>
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={100}>
         <Stack spacing={4}>
           <Heading color={'black'} fontWeight={'600'} fontSize={'4xl'} fontFamily={'Inter-bold'} >The Founder</Heading>
