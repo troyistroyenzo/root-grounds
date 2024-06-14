@@ -30,7 +30,7 @@ const products = [
         "food": "Sourdough",
         "price" : "₱489 / kg",
         "description": "A tangy and flavorful bread made through a slow fermentation process, known for its digestive benefits and unique taste.",
-        "image" : "https://homesteadandchill.com/wp-content/uploads/2019/02/simple-sourdough-bread-recipe-homestead-feature.jpeg",
+        "image" : "https://homesteadandchill.com/wp-content/uploads/2019/02/simple-sourdough-bread-recipe-homestead-product.jpeg",
       },
       {
         "id": 2,

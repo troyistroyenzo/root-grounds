@@ -143,12 +143,12 @@ const DesktopSubNav = ({ label, href, subLabel }) => {
       display={'block'}
       p={2}
       rounded={'md'}
-      _hover={{ bg: useColorModeValue('pink.50', 'gray.900') }}>
+      _hover={{ bg: useColorModeValue('black.50', 'gray.900') }}>
       <Stack direction={'row'} align={'center'}>
         <Box>
           <Text
             transition={'all .3s ease'}
-            _groupHover={{ color: 'pink.400' }}
+            _groupHover={{ color: 'green.400' }}
             fontWeight={500}>
             {label}
           </Text>
@@ -268,7 +268,37 @@ const NAV_ITEMS = [
     href: '/about',
   },
   {
-    label: 'Products',
-    href: '/products',
-  },
+        label: 'Products',
+        children: [
+          {
+            label: 'Coffee Products',
+            subLabel: 'Single origin and local beans.',
+            href: '/coffee',
+          },
+          {
+            label: 'Food Products',
+            subLabel: 'Whole and single ingredient foods',
+            href: '/food',
+            
+          },
+          {
+            label: 'Supplement Products',
+            subLabel: 'Athletic greens and multivitamins',
+            href: '/supplements',
+          },
+          {
+            label: 'Drink Products',
+            subLabel: 'Gut health & powerful drinks',
+            href: '/drinks',
+          },
+          
+          {
+            label: 'Coffee Appliances',
+            subLabel: 'Coming Soon',
+            href: '#',
+          },
+        ],
+      }
+  
+  
 ]

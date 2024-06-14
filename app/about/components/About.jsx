@@ -18,7 +18,7 @@ import { IoAnalyticsSharp, IoLogoBitcoin, IoSearchSharp, IoFood} from 'react-ico
 
 
 
-const Feature = ({ subtext, text, icon, iconBg, label }) => {
+const product = ({ subtext, text, icon, iconBg, label }) => {
   return (
     <Stack direction={'column'} align={'left'} p={'1rem'}>
       <Stack direction={'rows'} align={'left'}>
@@ -58,7 +58,7 @@ export default function SplitWithImage() {
         <Flex>
           <Image
             rounded={'md'}
-            alt={'feature image'}
+            alt={'product image'}
             src={
               'https://res.cloudinary.com/dlgyqy69b/image/upload/v1713165845/Mockup_1.5x_paxd3n.png'
             }
@@ -78,25 +78,25 @@ export default function SplitWithImage() {
           divider={
             <StackDivider borderColor={useColorModeValue('gray.100', 'gray.700')} />
           }>
-          <Feature
+          <product
             icon={'🥦'}
             iconBg={useColorModeValue('yellow.100', 'yellow.900')}
             text={'Fresh produce from the earth'}
             subtext={'We promote only whole foods, free from sugar, preservatives, stabilizers, or any additives.'}
           />
-          <Feature
+          <product
             icon={'🚚'}
             iconBg={useColorModeValue('green.100', 'green.900')}
             text={'Same Day Delivery & Batch Shipping'}
             subtext={'Enjoy multiple delivery options, supported by our robust backend that allows you to track your order.'}
           />
-          <Feature
+          <product
             icon={'🔁'}
             iconBg={useColorModeValue('purple.100', 'purple.900')}
             text={'Subscription Plans (coming soon)'}
             subtext={'Say goodbye to repetitive ordering! Soon, we will offer recurring orders for our loyal patrons.'}
           />
-          <Feature
+          <product
             icon={'💳'}
             iconBg={useColorModeValue('purple.100', 'purple.900')}
             text={'Integrated Payments (coming soon)'}
