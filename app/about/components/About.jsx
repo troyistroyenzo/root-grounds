@@ -47,7 +47,7 @@ export default function SplitWithImage() {
         <Stack spacing={4}>
           <Heading color={'black'} fontWeight={'600'} fontSize={'4xl'} fontFamily={'Inter-bold'} >The Founder</Heading>
           <Text color={'black.900'} fontSize={'md'}>
-          Hi, I'm Troy, founder of Root and Grounds. As an athlete, I prioritize black coffee and healthy produce. Root and Grounds offers single-origin coffee beans and whole foods, aiming to provide natural, unadulterated options in a world filled with additives. I believe in promoting a healthier lifestyle through our curated picks, sharing them with those who value quality and health.
+          Hi, I am Troy, founder of Root and Grounds. As an athlete, I prioritize black coffee and healthy produce. Root and Grounds offers single-origin coffee beans and whole foods, aiming to provide natural, unadulterated options in a world filled with additives. I believe in promoting a healthier lifestyle through our curated picks, sharing them with those who value quality and health.
           </Text>
           <Stack
             spacing={4}
