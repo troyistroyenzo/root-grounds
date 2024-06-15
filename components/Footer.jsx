@@ -183,6 +183,7 @@ const SocialButton = ({
 export default function LargeWithLogoCentered() {
   return (
     <Box
+      bg={'#F8F3F0'}
       color={useColorModeValue('gray.700', 'gray.200')}>
       <Container as={Stack} maxW={'2xl'} py={10}>
         <SimpleGrid columns={{ base: 2, sm: 1, md: 1 }} spacing={1}>

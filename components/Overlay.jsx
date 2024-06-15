@@ -7,34 +7,23 @@ const Overlay = () => {
 
   return (
     <>
-      <div className="char"  style={{ top: 70, left: 20, color: '#9C3300', fontSize:'50px', fontFamily: 'Bowlby'}}>
-      
-      </div>
-      <div className="char" style={{ top: '20vw', left: '20vw', color: '#25130F', fontFamily: 'Bowlby'}}>
+      <div className="absolute top-20 left-5 text-[#9C3300] text-[50px] font-[Bowlby]"></div>
+      <div className="absolute top-[20vw] left-[20vw] text-[#25130F] font-[Bowlby]">
         <br />
-       
       </div>
-      <div className="char" style={{ bottom: 120, left: '10vw', color: '#25130F',  fontFamily: 'Bowlby'}}>
-
-
+      <div className="absolute bottom-30 left-[10vw] text-[#25130F] font-[Bowlby]"></div>
+      <div className="absolute bottom-10 right-[5vw] text-[#9C3300] text-right font-[Bowlby]">
+        PRESS THE COFFEE BAG TO ORDER!
       </div>
-
-      <div className="char" style={{ bottom: 40, right: '5vw', color: '#9C3300', textAlign: 'right', fontFamily: 'Bowlby' }}> PRESS THE COFFEE BAG TO ORDER!</div>
-      <div style={{ position: 'absolute', top: -20, right: 20 , textAlign: 'right', fontVariantNumeric: 'tabular-nums' }}>
-    
-       
-      </div>
-      <div style={{ position: 'absolute', bottom: 170, left: 60, fontSize: '15px', color: 'black',}}>
-     
-        <div style={{ position: 'relative', bottom: 150, display: 'inline-block' }}>
-
-          <div style={{ marginTop: 6, height: 2.5, width: '100%', background: '#3e3e3d' }} />
-          
+      <div className="absolute top-[-5] right-5 text-right tabular-nums"></div>
+      <div className="absolute bottom-42 left-15 text-[15px] text-black">
+        <div className="relative bottom-[150px] inline-block">
+          <div className="mt-1.5 h-[2.5px] w-full bg-[#3e3e3d]" />
         </div>
         <br />
       </div>
     </>
   );
-}
+};
 
 export default Overlay;
