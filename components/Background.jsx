@@ -87,14 +87,15 @@ function Env({ perfSucks }) {
 
   return (
     
-    <Environment frames={perfSucks ? 1 : Infinity} preset="forest" resolution={256} background>
-    <group rotation={[Math.PI / 2, 1, 0]}>
-      {[2, -2, 2, -4, 2, -5, 2, -9].map((x, i) => (
-        <Lightformer key={i} intensity={1} rotation={[Math.PI / 4, 0, 0]} position={[x, 4, i * 4]} scale={[4, 1, 1]} />
-      ))}
-    </group>
-    <group ref={ref}>
-    </group>
-  </Environment>
+       <Environment frames={perfSucks ? 1 : Infinity} preset="forest" resolution={256} blur={0.1} background>
+      <group rotation={[Math.PI / 2, 1, 0]}>
+        {[2, -2, 2, -4, 2, -5, 2, -9].map((x, i) => (
+          <Lightformer key={i} intensity={1} rotation={[Math.PI / 4, 0, 0]} position={[x, 4, i * 4]} scale={[4, 1, 1]} />
+        ))}
+      </group>
+      <group ref={ref}>
+        <Lightformer intensity={50} form="sphere" color="#E6ECE8" rotation-y={Math.PI / 2} position={[-5, 2, -1]} scale={[10, 10, 1]} />
+      </group>
+    </Environment>
   )
 }
