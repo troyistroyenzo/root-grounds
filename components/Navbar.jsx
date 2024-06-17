@@ -33,7 +33,6 @@ export default function WithSubnavigation() {
     <Box>
       <Flex
         bg={'#F8F3F0'}
-        color={useColorModeValue('gray.600', 'white')}
         maxH={'10vh'}
         py={{ base: 2 }}
         px={{ base: 4 }}
@@ -55,8 +54,8 @@ export default function WithSubnavigation() {
         <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
           <Text
             textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
-            fontFamily={'inter'}
-            color={useColorModeValue('gray.800', 'white')}>
+            fontFamily={'Bowlby'}
+            color={'black'}>
          
 
           </Text>
@@ -137,6 +136,7 @@ const DesktopNav = () => {
 const DesktopSubNav = ({ label, href, subLabel }) => {
   return (
     <Box
+      font-family={'Bowlby'}
       as="a"
       href={href}
       role={'group'}
@@ -185,6 +185,7 @@ const MobileNavItem = ({ label, children, href }) => {
   return (
     <Stack spacing={4} onClick={children && onToggle}>
       <Box
+        font-family={'Bowlby'}
         py={2}
         as="a"
         href={href ?? '#'}
@@ -193,7 +194,7 @@ const MobileNavItem = ({ label, children, href }) => {
         _hover={{
           textDecoration: 'none',
         }}>
-        <Text fontWeight={600} color={useColorModeValue('gray.600', 'gray.200')}>
+        <Text fontWeight={600} color={'black'}>
           {label}
         </Text>
         {children && (
@@ -213,7 +214,6 @@ const MobileNavItem = ({ label, children, href }) => {
           pl={4}
           borderLeft={1}
           borderStyle={'solid'}
-          borderColor={useColorModeValue('gray.200', 'gray.700')}
           align={'start'}>
           {children &&
             children.map((child) => (

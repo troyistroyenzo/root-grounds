@@ -12,7 +12,7 @@ const Overlay = () => {
         <br />
       </div>
       <div className="absolute bottom-30 left-[10vw] text-[#25130F] font-[Bowlby]"></div>
-      <div className="absolute bottom-10 right-[5vw] text-[#9C3300] text-right font-[Bowlby]">
+      <div className="absolute bottom-10 right-[5vw] text-[#FF5757] text-right font-[Bowlby]">
         PRESS THE COFFEE BAG TO ORDER!
       </div>
       <div className="absolute top-[-5] right-5 text-right tabular-nums"></div>
