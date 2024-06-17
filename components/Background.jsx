@@ -1,17 +1,12 @@
 "use client"
 
 import * as THREE from 'three'
-import { useRef, useState, useEffect, StrictMode  } from 'react'
+import { useRef, useState, useEffect, useMemo } from 'react'
 import { easing } from 'maath'
 import { Canvas, useFrame } from '@react-three/fiber'
-import { useGLTF, Environment, Lightformer, PerformanceMonitor, AccumulativeShadows, MeshTransmissionMaterial } from '@react-three/drei'
+import { useGLTF, Center, Caustics, Environment, Lightformer, RandomizedLight, PerformanceMonitor, AccumulativeShadows, MeshTransmissionMaterial } from '@react-three/drei'
 import { Suspense } from 'react'
-import { createRoot } from 'react-dom/client'
-import { useLoader } from '@react-three/fiber'
-import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js'
-import { Stats, OrbitControls } from '@react-three/drei'
 
-// Optimized innerMaterial definition
 const innerMaterial = new THREE.MeshStandardMaterial({
   transparent: true,
   opacity: 1,
@@ -21,28 +16,31 @@ const innerMaterial = new THREE.MeshStandardMaterial({
   blending: THREE.AdditiveBlending,
   polygonOffset: true,
   polygonOffsetFactor: 1,
-  envMapIntensity: 2,
+  envMapIntensity: 2
 })
 
 export default function App() {
   const [perfSucks, degrade] = useState(false)
-
-
+  
+  useEffect(() => {
+    if (typeof document !== 'undefined') {
+      // Access document and perform necessary operations here
+    }
+  }, [])
+  
   return (
     <a style={{ fontSize: '25px', fontWeight: 900, letterSpacing: 2 }} href="https://form.jotform.com/rootandgrounds/order-form" target='_blank'> 
       <Canvas
         shadows
         dpr={[1, perfSucks ? 1.5 : 2]}
-        camera={{ position: [100, 100, 300], fov: 50 }}
-        // Set background color to red
-        style={{ backgroundColor: 'white' }}
-      >
-        <PerformanceMonitor onDecline={() => degrade(true)} />
+        camera={{ position: [100, 100, 300], fov: 50 }}>
+        <PerformanceMonitor onDecline={() => degrade(false)} />
+        <color attach="background" args={['#F8F8F8']} />
         <Suspense fallback={null}>
           <group position={[0, -0.5, 0]} rotation={[0, -0.75, 0]}>
             <Scene />
-            <AccumulativeShadows frames={100} alphaTest={0.85} opacity={0} color="white" scale={20} position={[0, -1.805, 0]}>
-              <Lightformer amount={8} radius={6} ambient={0.5} intensity={1} position={[-1.5, 2.5, -2.5]} bias={0.001} />
+            <AccumulativeShadows frames={100} alphaTest={0.85} opacity={0.1} color="white" scale={20} position={[0, -1.805, 0]}>
+              <RandomizedLight amount={8} radius={6} ambient={0.5} intensity={1} position={[-1.5, 2.5, -2.5]} bias={0.001} />
             </AccumulativeShadows>
           </group>
           <Env perfSucks={perfSucks} />
@@ -84,17 +82,15 @@ function Env({ perfSucks }) {
     }
   })
 
-
   return (
-    
-       <Environment frames={perfSucks ? 1 : Infinity} preset="city" resolution={256} blur={0.8} background>
+    <Environment frames={perfSucks ? 1 : Infinity} preset="forest" resolution={256} background>
       <group rotation={[Math.PI / 2, 1, 0]}>
         {[2, -2, 2, -4, 2, -5, 2, -9].map((x, i) => (
           <Lightformer key={i} intensity={1} rotation={[Math.PI / 4, 0, 0]} position={[x, 4, i * 4]} scale={[4, 1, 1]} />
         ))}
       </group>
       <group ref={ref}>
-        <Lightformer intensity={50} form="sphere" color="#E6ECE8" rotation-y={Math.PI / 2} position={[-5, 2, -1]} scale={[10, 10, 1]} />
+        <Lightformer intensity={5} form="sphere" color="#E6ECE8" rotation-y={Math.PI / 2} position={[-5, 2, -1]} scale={[10, 10, 1]} />
       </group>
     </Environment>
   )
