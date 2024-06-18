@@ -77,6 +77,7 @@ const ProductSimple = ({ food, description, image, price}) => {
         boxShadow={'1xl'}
         rounded={'lg'}
         pos={'relative'}
+        align={'center'}
         zIndex={1}>
         <Box
           rounded={'lg'}
