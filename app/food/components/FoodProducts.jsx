@@ -25,33 +25,40 @@ import { BiChevronRightCircle, BiCoffeeTogo, BiSolidCoffeeBean } from 'react-ico
 import { GiCircleCage, GiCoffee, GiCoffeeBeans} from 'react-icons/gi';
 
 const products = [
-    {
+      {
         "id": 1,
         "food": "Sourdough",
-        "price" : "₱489 / kg",
+        "price" : "₱379 / kg",
         "description": "A tangy and flavorful bread made through a slow fermentation process, known for its digestive benefits and unique taste.",
-        "image" : "https://homesteadandchill.com/wp-content/uploads/2019/02/simple-sourdough-bread-recipe-homestead-product.jpeg",
+        "image" : "https://res.cloudinary.com/dlgyqy69b/image/upload/v1718693560/viber_image_2024-05-21_14-53-26-655_eohoaw.jpg",
       },
       {
         "id": 2,
+        "food": "Smoked US Beef Brisket",
+        "price" : "₱1500 / kg",
+        "description": "US Beef brisket smoked in acacia wood.",
+        "image" : "https://res.cloudinary.com/dlgyqy69b/image/upload/v1718693778/photo_6309734178677177270_y_cklogs.jpg",
+      },
+      {
+        "id": 3,
         "food": "Honey",
         "description": "A natural sweetener with various health benefits, including antioxidants and soothing properties for throat health.",
         "image" : "https://img.freepik.com/premium-photo/honey-jar_920207-7369.jpg"
       },
       {
-        "id": 3,
+        "id": 4,
         "food": "Feta Cheese",
         "description": "A nutrient-rich cheese made from unpasteurized milk, preserving its natural enzymes and probiotics for digestive health.",
         "image" : "https://img.freepik.com/premium-photo/mediterranean-feta-cheese-generative-ai_94628-14968.jpg",
       },
       {
-        "id": 4,
+        "id": 5,
         "food": "Kimchi",
         "description": " rich in probiotics, vitamins, and antioxidants, supporting gut health, boosting immunity, and enhancing overall well-being.",
         "image" : "https://img.freepik.com/premium-photo/ai-generated-homemade-traditional-korean-kimchi-cuisine-fermented-vegetables-food-with-various-spices-everyday-meal_858705-286.jpg",
       },
       {
-        "id": 5,
+        "id": 6,
         "food": "Sauerkraut",
         "description": "Fermented cabbage rich in probiotics, promoting gut health and potentially enhancing immune function and digestion.",
         "image": "https://img.freepik.com/premium-photo/homemade-sauerkraut-jar-generative-ai_641010-16580.jpg"  // Replace with the actual image path
