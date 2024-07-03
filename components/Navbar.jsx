@@ -54,7 +54,7 @@ export default function WithSubnavigation() {
         <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
           <Text
             textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
-            fontFamily={'Bowlby'}
+      
             color={'black'}>
          
 
@@ -136,7 +136,7 @@ const DesktopNav = () => {
 const DesktopSubNav = ({ label, href, subLabel }) => {
   return (
     <Box
-      font-family={'Bowlby'}
+  
       as="a"
       href={href}
       role={'group'}
@@ -185,7 +185,6 @@ const MobileNavItem = ({ label, children, href }) => {
   return (
     <Stack spacing={4} onClick={children && onToggle}>
       <Box
-        font-family={'Bowlby'}
         py={2}
         as="a"
         href={href ?? '#'}

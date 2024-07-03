@@ -51,13 +51,13 @@ body {
 }
 
 header {
-  font-family: 'Bowlby';
-  color: 'white';
+  font-family: 'Inter-Bold';
+  color: 'black';
 }
 
 
 footer {
-  font-family: 'Bowlby-thin';
+  font-family: 'Inter-Bold';
   color: black;
 }
 

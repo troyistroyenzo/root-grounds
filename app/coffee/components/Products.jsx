@@ -27,10 +27,11 @@ import { GiCircleCage, GiCoffee, GiCoffeeBeans} from 'react-icons/gi';
 const products = [
   {
     id: 1,
-    food: 'Brazil Santos',
-    price: '₱589  ',
-    image: "https://res.cloudinary.com/dlgyqy69b/image/upload/v1718341397/ground_jcyoii.png",
+    food: 'Mindanao Blend',
+    price: '₱1809 (1kg)',
+    image: "https://res.cloudinary.com/dlgyqy69b/image/upload/v1718341374/ground_7_xnwnkn.png",
   },
+
   {
     id: 2,
     food: 'Ethiopia Sidamo',
@@ -63,9 +64,9 @@ const products = [
   },
   {
     id: 7,
-    food: 'Mindanao Blend',
-    price: '₱1300 (1kg)',
-    image: "https://res.cloudinary.com/dlgyqy69b/image/upload/v1718341374/ground_7_xnwnkn.png",
+    food: 'Brazil Santos',
+    price: '₱589  ',
+    image: "https://res.cloudinary.com/dlgyqy69b/image/upload/v1718341397/ground_jcyoii.png",
   },
   
   // {
