@@ -24,32 +24,16 @@ import { TbChartHistogram, TbCircle1Filled } from 'react-icons/tb';
 import { BiChevronRightCircle, BiCoffeeTogo, BiSolidCoffeeBean } from 'react-icons/bi';
 import { GiCircleCage, GiCoffee, GiCoffeeBeans} from 'react-icons/gi';
 
-const products = [
+const localProducts = [
   {
     id: 1,
     food: 'Mindanao Blend',
     price: '₱1809 (1kg)',
     image: "https://res.cloudinary.com/dlgyqy69b/image/upload/v1718341374/ground_7_xnwnkn.png",
+    description: "BEST SELLER"
   },
 
-  {
-    id: 2,
-    food: 'Ethiopia Sidamo',
-    price: '₱719 ',
-    image: "https://res.cloudinary.com/dlgyqy69b/image/upload/v1718341373/ground_3_zvax8p.png",
-  },
-  {
-    id: 3,
-    food: 'Colombia',
-    price: '₱649  ',
-    image: "https://res.cloudinary.com/dlgyqy69b/image/upload/v1718341372/ground_2_uk1ci3.png",
-  },
-  {
-    id: 4,
-    food: 'Vietnam',
-    price: '₱439  ',
-    image: "https://res.cloudinary.com/dlgyqy69b/image/upload/v1718341373/ground_4_z2bhiz.png",
-  },
+  
   {
     id: 5,
     food: 'Mt. Apo',
@@ -59,15 +43,10 @@ const products = [
   {
     id: 6,
     food: 'Bukidnon',
-    price: '₱468',
+    price: '₱600',
     image: "https://res.cloudinary.com/dlgyqy69b/image/upload/v1718341374/ground_6_cyappp.png",
   },
-  {
-    id: 7,
-    food: 'Brazil Santos',
-    price: '₱589  ',
-    image: "https://res.cloudinary.com/dlgyqy69b/image/upload/v1718341397/ground_jcyoii.png",
-  },
+
   
   // {
   //   id: 8,
@@ -153,6 +132,34 @@ const products = [
   
 ];
 
+const singleOriginProducts = [
+  {
+    id: 2,
+    food: 'Ethiopia Sidamo',
+    price: '₱719 ',
+    image: "https://res.cloudinary.com/dlgyqy69b/image/upload/v1718341373/ground_3_zvax8p.png",
+  },
+  {
+    id: 3,
+    food: 'Colombia',
+    price: '₱649  ',
+    image: "https://res.cloudinary.com/dlgyqy69b/image/upload/v1718341372/ground_2_uk1ci3.png",
+  },
+  {
+    id: 4,
+    food: 'Vietnam',
+    price: '₱439  ',
+    image: "https://res.cloudinary.com/dlgyqy69b/image/upload/v1718341373/ground_4_z2bhiz.png",
+  },
+  {
+    id: 7,
+    food: 'Brazil Santos',
+    price: '₱589  ',
+    image: "https://res.cloudinary.com/dlgyqy69b/image/upload/v1718341397/ground_jcyoii.png",
+  },
+];
+
+
 
 
 const ProductSimple = ({ food, description, image, price}) => {
@@ -196,20 +203,17 @@ const ProductSimple = ({ food, description, image, price}) => {
         </Box>
         <Stack pt={10} align={'center'}>
           <Stack direction={'column'} align={'center'}>
-            <Text fontWeight={600} fontSize={'sm'}>
+            <Text fontWeight={700} fontSize={'md'}>
             From {price}
             </Text>
-            {/* <Text textDecoration={'line-through'} color={'gray.600'}>
-              $199
-            </Text> */}
+            <Text textDecoration={'line-through'} color={'gray.600'}>
+              {/* $199 */}
+            </Text>
           </Stack>
         </Stack>
 
-          <Box p={2} align={'center'}>
-            <Text>
-            {description}
-            </Text>
-          </Box>
+
+          
 
       </Box>
     </Center>
@@ -222,13 +226,13 @@ export default function GridListWithHeading() {
     <Box bg={'#E6ECE8'} >
       <Container fontFamily={'Inter'} maxW={'4xl'} p={5}>
       <Stack spacing={4} py={10} as={Container} maxW={'6xl'} textAlign={'center'}>
-      <Heading fontSize={'3xl'} color={'black'} fontWeight={'500'} fontFamily={'Inter-Bold'}>Coffee Beans</Heading>
+      <Heading fontSize={'3xl'} color={'black'} fontWeight={'500'} fontFamily={'Inter-Bold'}>Local Coffee Beans</Heading>
         <Text color={'black'} fontFamily={'Inter'} fontSize={'xl'} >
-          Single origin & local coffee beans.
+          Local coffee beans sourced from Balutakay Coffee Farmers Association (BACOFA)
         </Text>
       </Stack>
         <SimpleGrid columns={{ base: 2, md: 2, lg: 3 }} spacing={10} mt={10}>
-          {products.map((product) => (
+          {localProducts.map((product) => (
             <ProductSimple
             key={product.id}
             food={product.food}
@@ -236,8 +240,26 @@ export default function GridListWithHeading() {
             image={product.image}
             price={product.price}/>
           ))}
-     
-            
+        </SimpleGrid>
+
+      </Container>
+
+      <Container fontFamily={'Inter'} maxW={'4xl'} p={5}>
+      <Stack spacing={4} py={10} as={Container} maxW={'6xl'} textAlign={'center'}>
+      <Heading fontSize={'3xl'} color={'black'} fontWeight={'500'} fontFamily={'Inter-Bold'}>Single Origin Beans</Heading>
+      <Text color={'black'} fontFamily={'Inter'} fontSize={'xl'} >
+          Imported beans from different countries.
+        </Text>
+      </Stack>
+        <SimpleGrid columns={{ base: 2, md: 2, lg: 3 }} spacing={10} mt={10}>
+          {singleOriginProducts.map((product) => (
+            <ProductSimple
+            key={product.id}
+            food={product.food}
+            description={product.description}
+            image={product.image}
+            price={product.price}/>
+          ))}
         </SimpleGrid>
       </Container>
     </Box>

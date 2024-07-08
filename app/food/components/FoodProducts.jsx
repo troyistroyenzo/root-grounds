@@ -30,46 +30,47 @@ const products = [
         "food": "Sourdough",
         "price" : "₱379 / kg",
         "description": "A tangy and flavorful bread made through a slow fermentation process, known for its digestive benefits and unique taste.",
-        "image" : "https://res.cloudinary.com/dlgyqy69b/image/upload/v1718693560/viber_image_2024-05-21_14-53-26-655_eohoaw.jpg",
+        "image" : "https://res.cloudinary.com/dlgyqy69b/image/upload/v1720427673/SOURDOUGH_2_cwg8fn.png",
       },
       {
         "id": 2,
         "food": "Smoked US Beef Brisket",
-        "price" : "₱1500 / kg",
-        "description": "US Beef brisket smoked in acacia wood.",
-        "image" : "https://res.cloudinary.com/dlgyqy69b/image/upload/v1718693778/photo_6309734178677177270_y_cklogs.jpg",
+        "price" : "₱1700 / kg",
+        "description": "Smoked USDA beef, prepared with mahogany or mesquite hardwoods and wrapped in quality butcher paper, undergoes a 20-hour process for unparalleled flavor, juiciness, and tenderness.",
+        "image" : "https://res.cloudinary.com/dlgyqy69b/image/upload/v1720427672/SOURDOUGH_cd34mo.png",
       },
       {
         "id": 3,
         "food": "Honey",
+        "price" : "₱900 / L",
         "description": "A natural sweetener with various health benefits, including antioxidants and soothing properties for throat health.",
         "image" : "https://img.freepik.com/premium-photo/honey-jar_920207-7369.jpg"
       },
-      {
-        "id": 4,
-        "food": "Feta Cheese",
-        "description": "A nutrient-rich cheese made from unpasteurized milk, preserving its natural enzymes and probiotics for digestive health.",
-        "image" : "https://img.freepik.com/premium-photo/mediterranean-feta-cheese-generative-ai_94628-14968.jpg",
-      },
-      {
-        "id": 5,
-        "food": "Kimchi",
-        "description": " rich in probiotics, vitamins, and antioxidants, supporting gut health, boosting immunity, and enhancing overall well-being.",
-        "image" : "https://img.freepik.com/premium-photo/ai-generated-homemade-traditional-korean-kimchi-cuisine-fermented-vegetables-food-with-various-spices-everyday-meal_858705-286.jpg",
-      },
-      {
-        "id": 6,
-        "food": "Sauerkraut",
-        "description": "Fermented cabbage rich in probiotics, promoting gut health and potentially enhancing immune function and digestion.",
-        "image": "https://img.freepik.com/premium-photo/homemade-sauerkraut-jar-generative-ai_641010-16580.jpg"  // Replace with the actual image path
-      }, 
+      // {
+      //   "id": 4,
+      //   "food": "Feta Cheese",
+      //   "description": "A nutrient-rich cheese made from unpasteurized milk, preserving its natural enzymes and probiotics for digestive health.",
+      //   "image" : "https://img.freepik.com/premium-photo/mediterranean-feta-cheese-generative-ai_94628-14968.jpg",
+      // },
+      // {
+      //   "id": 5,
+      //   "food": "Kimchi",
+      //   "description": " rich in probiotics, vitamins, and antioxidants, supporting gut health, boosting immunity, and enhancing overall well-being.",
+      //   "image" : "https://img.freepik.com/premium-photo/ai-generated-homemade-traditional-korean-kimchi-cuisine-fermented-vegetables-food-with-various-spices-everyday-meal_858705-286.jpg",
+      // },
+      // {
+      //   "id": 6,
+      //   "food": "Sauerkraut",
+      //   "description": "Fermented cabbage rich in probiotics, promoting gut health and potentially enhancing immune function and digestion.",
+      //   "image": "https://img.freepik.com/premium-photo/homemade-sauerkraut-jar-generative-ai_641010-16580.jpg"  // Replace with the actual image path
+      // }, 
 
 ];
 
 
 const ProductSimple = ({ food, description, image, price}) => {
   return (
-    <Center py={12} fontFamily={'inter'}>
+    <Center py={5} fontFamily={'inter'}>
       <Box
         role={'group'}
         w={'full'}
@@ -77,14 +78,12 @@ const ProductSimple = ({ food, description, image, price}) => {
         boxShadow={'1xl'}
         rounded={'lg'}
         pos={'relative'}
-        align={'center'}
         zIndex={1}>
         <Box
           rounded={'lg'}
           mt={-12}
           w={'full'}
           pos={'relative'}
-          height={'230px'}
           _after={{
             transition: 'all .3s ease',
             content: '""',
@@ -103,21 +102,15 @@ const ProductSimple = ({ food, description, image, price}) => {
             },
           }}>
           <Image
-            rounded={'lg'}
-            height={230}
-            width={3182}
             objectFit={'cover'}
             src={image}
-            alt="#"
+            alt="coffee flavor single origin label"
           />
         </Box>
         <Stack pt={10} align={'center'}>
-          <Heading fontSize={'2xl'}fontFamily={'Inter-Bold'}  fontWeight={500}>
-          {food}
-          </Heading>
-          <Stack direction={'row'} align={'center'}>
-            <Text fontWeight={600} fontSize={'xl'}>
-            {price}
+          <Stack direction={'column'} align={'center'}>
+            <Text fontWeight={600} fontSize={'sm'}>
+            From {price}
             </Text>
             {/* <Text textDecoration={'line-through'} color={'gray.600'}>
               $199
@@ -130,6 +123,7 @@ const ProductSimple = ({ food, description, image, price}) => {
             {description}
             </Text>
           </Box>
+          
 
       </Box>
     </Center>
@@ -140,16 +134,14 @@ const ProductSimple = ({ food, description, image, price}) => {
 export default function GridListWithHeading() {
   return (
     <Box bg={'#E6ECE8'} >
-      <Stack spacing={4} py={12} as={Container} maxW={'6xl'} textAlign={'center'}>
+      <Container fontFamily={'Inter'} maxW={'4xl'} p={5}>
+      <Stack spacing={4} py={10} as={Container} maxW={'6xl'} textAlign={'center'}>
       <Heading fontSize={'3xl'} color={'black'} fontWeight={'500'} fontFamily={'Inter-Bold'}>Whole Foods</Heading>
-        <Text color={'black'} fontFamily={'Inter'} fontSize={'xl'}>
-          You are what you eat, so eat better foods. 😉
+        <Text color={'black'} fontFamily={'Inter'} fontSize={'xl'} >
+          Low calorie, high nutrient and delicious foods.
         </Text>
       </Stack>
-      <Stack spacing={4} as={Container} maxW={'2xl'} textAlign={'center'}>
-      </Stack>
-      <Container fontFamily={'Inter'} maxW={'4xl'} mt={10}>
-        <SimpleGrid columns={{ base: 2, md: 2, lg: 3 }} spacing={5}>
+        <SimpleGrid columns={{ base: 2, md: 2, lg: 3 }} spacing={10} mt={10}>
           {products.map((product) => (
             <ProductSimple
             key={product.id}

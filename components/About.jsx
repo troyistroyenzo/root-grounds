@@ -44,7 +44,7 @@ export default function SplitWithImage() {
   return (
     <Container bg={'#E6ECE8'} maxWidth={'100%'} p={10} py={100}>
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={100}>
-        <Stack spacing={4}>
+        {/* <Stack spacing={4}>
           <Heading color={'black'} fontWeight={'600'} fontSize={'4xl'} fontFamily={'Inter-bold'} >The Founder</Heading>
           <Text color={'black.900'} fontSize={'md'}>
           Hi, I am Troy, founder of Root and Grounds. As an athlete, I prioritize black coffee and healthy produce. Root and Grounds offers single-origin coffee beans and whole foods, aiming to provide natural, unadulterated options in a world filled with additives. I believe in promoting a healthier lifestyle through our curated picks, sharing them with those who value quality and health.
@@ -55,9 +55,8 @@ export default function SplitWithImage() {
               <StackDivider borderColor={useColorModeValue('gray.100', 'gray.700')} />
             }>
           </Stack>
-          
-        </Stack>
-        <Flex>
+        </Stack> */}
+        {/* <Flex>
         <Image
             rounded={'md'}
             alt={'feature image'}
@@ -68,13 +67,13 @@ export default function SplitWithImage() {
             }
             objectFit={'cover'}
           />
-        </Flex>
+        </Flex> */}
       </SimpleGrid>
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={100}>
         <Stack spacing={4}>
           <Heading color={'black'} fontWeight={'600'} fontSize={'4xl'} fontFamily={'Inter-bold'} >What is Root & Grounds?</Heading>
           <Text color={'black.900'} fontSize={'md'}>
-          We are a curation of single origin & local beans and super whole foods. 👀
+          We are a one-stop shop for curated single-origin and locally sourced beans, as well as super whole foods. Our brand is dedicated to promoting wellness and better food choices. Our mission is not only to offer superior produce but also to provide education on nutrition and fitness. 
           </Text>
           <Stack
             spacing={4}
@@ -88,7 +87,7 @@ export default function SplitWithImage() {
             rounded={'md'}
             alt={'feature image'}
             src={
-              'https://res.cloudinary.com/dlgyqy69b/image/upload/v1713165845/Mockup_1.5x_paxd3n.png'
+              'https://res.cloudinary.com/dlgyqy69b/image/upload/v1720429180/gg00175849_ibowwr.png'
             }
             objectFit={'cover'}
           />

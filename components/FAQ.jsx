@@ -18,7 +18,7 @@ export default function SimpleAccordion() {
   const [faqItems, setFaqItems] = useState([
     {
       question: "How 2 order?",
-      answer: "Order through our official order form (we have only one, if you see anything else it's a scam)"
+      answer: "Order through our official order form."
     },
     {
       question: "When will I get my beans?",
@@ -49,7 +49,7 @@ export default function SimpleAccordion() {
       <Stack spacing={4} py={19} as={Container} maxW={'3xl'} textAlign={'center'}>
         <Heading fontSize={'3xl'} color={'black'} fontWeight={'500'} fontFamily={'Inter-Bold'}>FAQs</Heading>
         <Text color={'black'} fontFamily={'Inter'} fontSize={'xl'}>
-          Got questions? We have the answers! 🤔
+          Got questions? We got you! 🤔
           <br/>
         </Text>
       </Stack>

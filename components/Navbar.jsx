@@ -263,10 +263,6 @@ const NAV_ITEMS = [
     href: '/',
   },
   {
-    label: 'About',
-    href: '/about',
-  },
-  {
         label: 'Products',
         children: [
           {
@@ -291,11 +287,6 @@ const NAV_ITEMS = [
             href: '/drinks',
           },
           
-          {
-            label: 'Coffee Appliances',
-            subLabel: 'Coming Soon',
-            href: '#',
-          },
         ],
       }
   
