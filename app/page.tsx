@@ -3,14 +3,14 @@ import Background from "@/components/Background"
 import Overlay from "@/components/Overlay"
 import About from "@/components/About"
 import FAQ from "@/components/Faq"
-import Carousel from "@/components/Carousel"
+import Featured from "@/components/Featured"
 
 export default function Home() {
   return (
     <>
     <Background/>
     <Overlay/>
-    <Carousel/>
+    <Featured/>
     <About/>
     <FAQ/>
   
