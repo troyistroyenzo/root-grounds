@@ -17,12 +17,12 @@ import { useState } from 'react';
 export default function SimpleAccordion() {
   const [faqItems, setFaqItems] = useState([
     {
-      question: "How 2 order?",
-      answer: "Order through our official order form."
+      question: "How can I order?",
+      answer: "Click the 3D bag to order! You can also message us on any of our platforms to order. Alternatively, you can order through here: https://form.jotform.com/rootandgrounds/order-form"
     },
     {
-      question: "When will I get my beans?",
-      answer: "We do batch orders so times may vary (3-5 days) and will be shipped via customers preferred courier."
+      question: "What products do you have?",
+      answer: "We currently sell coffee beans, sourdough and beef brisket."
     },
     {
       question: "Any delivery charges?",
@@ -40,7 +40,6 @@ export default function SimpleAccordion() {
 
   return (
     <Flex
-    bg={'#E6ECE8'} 
       minH={'30vh'}
       py={'10vh'}
       align={'center'}

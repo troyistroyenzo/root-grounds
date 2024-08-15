@@ -29,7 +29,7 @@ const localProducts = [
     id: 1,
     food: 'Mindanao Blend',
     price: '₱1809 (1kg)',
-    image: "https://res.cloudinary.com/dlgyqy69b/image/upload/v1718341374/ground_7_xnwnkn.png",
+    image: "https://res.cloudinary.com/dlgyqy69b/image/upload/v1723704794/2_ke8bpq.png",
     description: "BEST SELLER"
   },
 
@@ -38,7 +38,7 @@ const localProducts = [
     id: 5,
     food: 'Mt. Apo',
     price: '₱448  ',
-    image: "https://res.cloudinary.com/dlgyqy69b/image/upload/v1718341397/ground_5_cwpx9d.png",
+    image: "https://res.cloudinary.com/dlgyqy69b/image/upload/v1723704797/3_wqxr0z.png",
   },
   {
     id: 6,
@@ -187,12 +187,12 @@ const ProductSimple = ({ food, description, image, price}) => {
             top: 5,
             left: 0,
             backgroundImage: `url(${image})`,
-            filter: 'blur(15px)',
+           
             zIndex: -1,
           }}
           _groupHover={{
             _after: {
-              filter: 'blur(20px)',
+            
             },
           }}>
           <Image
@@ -223,7 +223,7 @@ const ProductSimple = ({ food, description, image, price}) => {
 
 export default function GridListWithHeading() {
   return (
-    <Box bg={'#E6ECE8'} >
+    <Box bg={'linear-gradient(90deg, #e8e8e8, #f2e3da)'} >
       <Container fontFamily={'Inter'} maxW={'4xl'} p={5}>
       <Stack spacing={4} py={10} as={Container} maxW={'6xl'} textAlign={'center'}>
       <Heading fontSize={'3xl'} color={'black'} fontWeight={'500'} fontFamily={'Inter-Bold'}>Local Coffee Beans</Heading>

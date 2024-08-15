@@ -31,7 +31,7 @@ function StatsCard(props) {
         </StatNumber> */}
         <Image
           rounded={'md'}
-          maxWidth={'75%'}
+          maxWidth={'95%'}
           alt={'feature image'}
           src={source}
         />
@@ -42,14 +42,14 @@ function StatsCard(props) {
 
 export default function BasicStatistics() {
   return (
-    <Box bg={'#E6ECE8'} maxW="7xl" mx={'auto'} pt={5} px={{ base: 2, sm: 12, md: 17 }}>
-      <chakra.h1 textAlign={'center'} fontSize={'4xl'} py={10} fontWeight={'bold'}>
-        New Featured Products
+    <Box bg={'linear-gradient(90deg, #e8e8e8, #f2e3da)'} maxW="7xl" mx={'auto'} pt={5} px={{ base: 2, sm: 12, md: 17 }}>
+      <chakra.h1 textAlign={'center'} fontSize={'4xl'} py={10} fontWeight={'bold'} color={'black.900'}>
+       Featured Products
       </chakra.h1>
       <SimpleGrid columns={{ base: 1, md: 3 }} spacing={{ base: 5, lg: 8 }}>
-      <StatsCard title={'Sourdough Bread'} source={'https://res.cloudinary.com/dlgyqy69b/image/upload/v1720427672/SOURDOUGH_cd34mo.png'} />
-        <StatsCard title={'Bukidnon Coffee Beans'} source={'https://res.cloudinary.com/dlgyqy69b/image/upload/v1720427673/SOURDOUGH_2_cwg8fn.png'} />
-        <StatsCard title={'Smoked Beef Belly'} source={'https://res.cloudinary.com/dlgyqy69b/image/upload/v1720431300/SOURDOUGH_5_lvi1dd.png'} />
+      <StatsCard title={'Sourdough Bread'} source={'https://res.cloudinary.com/dlgyqy69b/image/upload/v1723701687/8_dvb33k.png'} />
+        <StatsCard title={'Bukidnon Coffee Beans'} source={'https://res.cloudinary.com/dlgyqy69b/image/upload/v1723701685/7_whuvg6.png'} />
+        <StatsCard title={'Smoked Beef Belly'} source={'https://res.cloudinary.com/dlgyqy69b/image/upload/v1723701687/9_ejtvjp.png'} />
       </SimpleGrid>
     </Box>
   )

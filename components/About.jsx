@@ -42,12 +42,13 @@ const Feature = ({ subtext, text, icon, iconBg, label }) => {
 
 export default function SplitWithImage() {
   return (
-    <Container bg={'#E6ECE8'} maxWidth={'100%'} p={10} py={100}>
+    <Container bg={'linear-gradient(90deg, #e8e8e8, #f2e3da)'} maxWidth={'100%'} p={10} py={100}>
+     
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={100}>
-        {/* <Stack spacing={4}>
-          <Heading color={'black'} fontWeight={'600'} fontSize={'4xl'} fontFamily={'Inter-bold'} >The Founder</Heading>
-          <Text color={'black.900'} fontSize={'md'}>
-          Hi, I am Troy, founder of Root and Grounds. As an athlete, I prioritize black coffee and healthy produce. Root and Grounds offers single-origin coffee beans and whole foods, aiming to provide natural, unadulterated options in a world filled with additives. I believe in promoting a healthier lifestyle through our curated picks, sharing them with those who value quality and health.
+        <Stack spacing={4}>
+          <Heading color={'black.900'} fontWeight={'600'} fontSize={'4xl'} fontFamily={'Inter-bold'} >What is Root & Grounds?</Heading>
+          <Text color={'black.900'}fontSize={'md'}>
+          We are a one-stop shop for curated single-origin and locally sourced beans, as well as super whole foods. Our brand is dedicated to promoting wellness and better food choices. Our mission is not only to offer superior produce but also to provide education on nutrition and fitness. 
           </Text>
           <Stack
             spacing={4}
@@ -55,25 +56,25 @@ export default function SplitWithImage() {
               <StackDivider borderColor={useColorModeValue('gray.100', 'gray.700')} />
             }>
           </Stack>
-        </Stack> */}
-        {/* <Flex>
-        <Image
+        </Stack>
+        <Flex>
+          <Image
             rounded={'md'}
             alt={'feature image'}
-            height={'70%'}
-            width={'100%'}
             src={
-              'https://res.cloudinary.com/dlgyqy69b/image/upload/v1718344254/photo_6226581576012119391_y_on5nv5.jpg'
+              'https://res.cloudinary.com/dlgyqy69b/image/upload/v1723702003/Frontend_Labels_1080_x_1350_px_dgi6i1.png'
             }
             objectFit={'cover'}
           />
-        </Flex> */}
+        </Flex>
       </SimpleGrid>
+
+      <Stack spacing={10} textAlign="left" mt={100}>
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={100}>
         <Stack spacing={4}>
-          <Heading color={'black'} fontWeight={'600'} fontSize={'4xl'} fontFamily={'Inter-bold'} >What is Root & Grounds?</Heading>
-          <Text color={'black.900'} fontSize={'md'}>
-          We are a one-stop shop for curated single-origin and locally sourced beans, as well as super whole foods. Our brand is dedicated to promoting wellness and better food choices. Our mission is not only to offer superior produce but also to provide education on nutrition and fitness. 
+          <Heading color={'black.900'} fontWeight={'600'} fontSize={'4xl'} fontFamily={'Inter-bold'} >Our Culture</Heading>
+          <Text color={'black.900'}fontSize={'md'}>
+          We foster a culture of collaboration with small cafes that strive to provide delicious and healthy produce. Our goal is for our clients to offer high-quality products, both local and imported. 
           </Text>
           <Stack
             spacing={4}
@@ -93,10 +94,11 @@ export default function SplitWithImage() {
           />
         </Flex>
       </SimpleGrid>
+      </Stack>
 
-      <Center>
-  <Stack spacing={10} textAlign="center" mt={100}>
-    <Heading color={'black'} fontWeight={'600'} fontSize={'4xl'} fontFamily={'Inter-bold'}>
+     
+  <Stack spacing={10} textAlign="left" mt={100}>
+    <Heading color={'black.900'} fontWeight={'600'} fontSize={'4xl'} fontFamily={'Inter-bold'}>
       Why us?
     </Heading>
     <Text color={'black.900'} fontSize={'md'}>
@@ -134,7 +136,7 @@ export default function SplitWithImage() {
       />
     </Stack>
   </Stack>
-</Center>
+
 
     </Container>
 
