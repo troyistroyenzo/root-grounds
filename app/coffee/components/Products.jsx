@@ -28,23 +28,25 @@ const localProducts = [
   {
     id: 1,
     food: 'Mindanao Blend',
-    price: '₱1809 (1kg)',
+    price: '₱1809',
     image: "https://res.cloudinary.com/dlgyqy69b/image/upload/v1723704794/2_ke8bpq.png",
-    description: "BEST SELLER"
+    description: "Bright lemon and sweet calamansi, tropical fruit with a hint of baker's chocolate, and a syrupy body with nutty and caramel notes."
   },
 
   
   {
     id: 5,
     food: 'Mt. Apo',
+    description: 'Lemon vibes, smooth body, hints of bakers chocolate and nuttiness.',
     price: '₱310  ',
     image: "https://res.cloudinary.com/dlgyqy69b/image/upload/v1723704797/3_wqxr0z.png",
   },
 
   {
     id: 5,
-    food: 'Mt. Apo',
+    food: 'Bukidnon',
     price: '₱310  ',
+    description: 'Sweet calamansi, tropical fruit, syrupy body, and caramel finish.',
     image: "https://res.cloudinary.com/dlgyqy69b/image/upload/v1723706140/Frontend_Labels_iyhlxi.png",
   },
 
@@ -139,24 +141,28 @@ const singleOriginProducts = [
     id: 2,
     food: 'Ethiopia Sidamo',
     price: '₱719 ',
+    description: 'Floral jasmine with a juicy body and a clean, lemony finish.',
     image: "https://res.cloudinary.com/dlgyqy69b/image/upload/v1723707666/9_ecn2rq.png",
   },
   {
     id: 3,
     food: 'Colombia',
     price: '₱649  ',
+    description: 'Sweet and nutty aroma, mild acidity, chocolate finish, and nutty aftertaste.',
     image: "https://res.cloudinary.com/dlgyqy69b/image/upload/v1723707666/8_wol9of.png",
   },
   {
     id: 4,
     food: 'Vietnam',
     price: '₱439  ',
+    description: 'Edgy burnt wood and nutty aroma with a hint of cacao nibs.',
     image: "https://res.cloudinary.com/dlgyqy69b/image/upload/v1723704795/5_qkodja.png",
   },
   {
     id: 7,
     food: 'Brazil Santos',
     price: '₱589  ',
+    description: 'Like a chill chocolate bar, smooth with a hint of mild acidity.',
     image: "https://res.cloudinary.com/dlgyqy69b/image/upload/v1723704797/4_clvdio.png",
   },
 ];
@@ -185,13 +191,13 @@ const ProductSimple = ({ food, description, image, price}) => {
             alt="coffee flavor single origin label"
           />
         </Box>
-        <Stack pt={10} align={'center'}>
-          <Stack direction={'column'} align={'center'}>
-            <Text fontWeight={700} fontSize={'md'}>
+        <Stack margin={5} textAlign={'left'}>
+          <Stack direction={'column'}>
+            <Text fontWeight={900} fontSize={'lg'} color={'#ff6600'} textAlign={'left'}>
             From {price}
             </Text>
-            <Text textDecoration={'line-through'} color={'gray.600'}>
-              {/* $199 */}
+            <Text fontWeight={400}>
+              {description}
             </Text>
           </Stack>
         </Stack>
@@ -229,7 +235,7 @@ export default function GridListWithHeading() {
       </Container>
 
       <Container fontFamily={'Inter'} maxW={'4xl'} p={5}>
-      <Stack spacing={4} py={10} as={Container} maxW={'6xl'} textAlign={'center'}>
+      <Stack spacing={4} py={10} as={Container} maxW={'6xl'} textAlign={'left'}>
       <Heading fontSize={'3xl'} color={'black'} fontWeight={'500'} fontFamily={'Inter-Bold'}>Single Origin Beans</Heading>
       <Text color={'black'} fontFamily={'Inter'} fontSize={'xl'} >
           Imported beans from different countries.
