@@ -139,25 +139,25 @@ const singleOriginProducts = [
     id: 2,
     food: 'Ethiopia Sidamo',
     price: '₱719 ',
-    image: "https://res.cloudinary.com/dlgyqy69b/image/upload/v1718341373/ground_3_zvax8p.png",
+    image: "https://res.cloudinary.com/dlgyqy69b/image/upload/v1723707666/9_ecn2rq.png",
   },
   {
     id: 3,
     food: 'Colombia',
     price: '₱649  ',
-    image: "https://res.cloudinary.com/dlgyqy69b/image/upload/v1718341372/ground_2_uk1ci3.png",
+    image: "https://res.cloudinary.com/dlgyqy69b/image/upload/v1723707666/8_wol9of.png",
   },
   {
     id: 4,
     food: 'Vietnam',
     price: '₱439  ',
-    image: "https://res.cloudinary.com/dlgyqy69b/image/upload/v1718341373/ground_4_z2bhiz.png",
+    image: "https://res.cloudinary.com/dlgyqy69b/image/upload/v1723704795/5_qkodja.png",
   },
   {
     id: 7,
     food: 'Brazil Santos',
     price: '₱589  ',
-    image: "https://res.cloudinary.com/dlgyqy69b/image/upload/v1718341397/ground_jcyoii.png",
+    image: "https://res.cloudinary.com/dlgyqy69b/image/upload/v1723704797/4_clvdio.png",
   },
 ];
 
@@ -171,7 +171,6 @@ const ProductSimple = ({ food, description, image, price}) => {
         role={'group'}
         w={'full'}
         bg={useColorModeValue('white', 'gray.800')}
-        boxShadow={'1xl'}
         rounded={'lg'}
         pos={'relative'}
         zIndex={1}>
@@ -179,8 +178,7 @@ const ProductSimple = ({ food, description, image, price}) => {
           rounded={'lg'}
           mt={-12}
           w={'full'}
-          pos={'relative'}
->
+          pos={'relative'}>
           <Image
             objectFit={'cover'}
             src={image}
@@ -217,7 +215,7 @@ export default function GridListWithHeading() {
           Local coffee beans sourced from Balutakay Coffee Farmers Association (BACOFA)
         </Text>
       </Stack>
-        <SimpleGrid columns={{ base: 2, md: 2, lg: 3 }} spacing={10} mt={10}>
+        <SimpleGrid columns={{ base: 1, md: 2, lg: 2 }} spacing={10} mt={5}>
           {localProducts.map((product) => (
             <ProductSimple
             key={product.id}
@@ -237,7 +235,7 @@ export default function GridListWithHeading() {
           Imported beans from different countries.
         </Text>
       </Stack>
-        <SimpleGrid columns={{ base: 2, md: 2, lg: 3 }} spacing={10} mt={10}>
+        <SimpleGrid columns={{ base: 1, md: 2, lg: 2 }} spacing={10} mt={10}>
           {singleOriginProducts.map((product) => (
             <ProductSimple
             key={product.id}
