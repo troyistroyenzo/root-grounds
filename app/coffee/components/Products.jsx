@@ -37,15 +37,17 @@ const localProducts = [
   {
     id: 5,
     food: 'Mt. Apo',
-    price: '₱448  ',
+    price: '₱310  ',
     image: "https://res.cloudinary.com/dlgyqy69b/image/upload/v1723704797/3_wqxr0z.png",
   },
+
   {
-    id: 6,
-    food: 'Bukidnon',
-    price: '₱600',
-    image: "https://res.cloudinary.com/dlgyqy69b/image/upload/v1718341374/ground_6_cyappp.png",
+    id: 5,
+    food: 'Mt. Apo',
+    price: '₱310  ',
+    image: "https://res.cloudinary.com/dlgyqy69b/image/upload/v1723706140/Frontend_Labels_iyhlxi.png",
   },
+
 
   
   // {
@@ -178,23 +180,7 @@ const ProductSimple = ({ food, description, image, price}) => {
           mt={-12}
           w={'full'}
           pos={'relative'}
-          _after={{
-            transition: 'all .3s ease',
-            content: '""',
-            w: 'full',
-            h: 'full',
-            pos: 'absolute',
-            top: 5,
-            left: 0,
-            backgroundImage: `url(${image})`,
-           
-            zIndex: -1,
-          }}
-          _groupHover={{
-            _after: {
-            
-            },
-          }}>
+>
           <Image
             objectFit={'cover'}
             src={image}

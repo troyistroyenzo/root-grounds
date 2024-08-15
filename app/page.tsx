@@ -11,7 +11,7 @@ export default function Home() {
     <>
     <Background/>
     <Overlay/>
-    {/* <Clients/> */}
+    <Clients/>
     <Featured/>
     <About/>
     <Questions/>

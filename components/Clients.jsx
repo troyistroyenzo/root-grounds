@@ -7,117 +7,60 @@ import {
   Text,
   Stack,
   Container,
-  Avatar,
-  useColorModeValue,
+  Image,
+  Link,
 } from '@chakra-ui/react'
 
-// Reusable components
-const Testimonial = ({ children }) => <Box>{children}</Box>
-
-const TestimonialContent = ({ children }) => (
-  <Stack
-    fontFamily={'inter'} 
-    bg={useColorModeValue('white', 'gray.800')}
-    boxShadow={'lg'}
-    p={8}
-    rounded={'xl'}
-    align={'center'}
-    pos={'relative'}
-    _after={{
-      content: `""`,
-      w: 0,
-      h: 0,
-      borderLeft: 'solid transparent',
-      borderLeftWidth: 16,
-      borderRight: 'solid transparent',
-      borderRightWidth: 16,
-      borderTop: 'solid',
-      borderTopWidth: 16,
-      borderTopColor: useColorModeValue('white', 'gray.800'),
-      pos: 'absolute',
-      bottom: '-16px',
-      left: '50%',
-      transform: 'translateX(-50%)',
-    }}
-  >
-    {children}
-  </Stack>
-)
-
-const TestimonialHeading = ({ children }) => (
-  <Heading as={'h3'} fontSize={'xl'}>
-    {children}
-  </Heading>
-)
-
-const TestimonialText = ({ children }) => (
-  <Text
-    textAlign={'center'}
-    color={useColorModeValue('gray.600', 'gray.400')}
-    fontSize={'sm'}
-  >
-    {children}
-  </Text>
-)
-
-const TestimonialAvatar = ({ src, name, title }) => (
-  <Flex align={'center'} mt={8} direction={'column'}>
-    <Avatar src={src} mb={2} />
-    <Stack spacing={-1} align={'center'}>
-      <Text fontWeight={600}>{name}</Text>
-      <Text fontSize={'sm'} color={useColorModeValue('gray.600', 'gray.400')}>
-        {title}
-      </Text>
-    </Stack>
-  </Flex>
-)
-
-// Example JSON data for testimonials
-const testimonialsData = [
+// Example JSON data for clients with URLs
+const clientsData = [
   {
-    heading: '',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor neque sed imperdiet nibh lectus feugiat nunc sem.',
     avatarSrc:
-      'https://images.unsplash.com/photo-1586297135537-94bc9ba060aa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80',
-    name: 'Nigel Villanueva',
-    title: 'CEO of PerkCup Coffee',
+      'https://res.cloudinary.com/dlgyqy69b/image/upload/v1723706398/logo_2_-_Copy_tgymdf.png',
+    name: 'Perk Cup Coffee',
+    link: 'https://www.facebook.com/coffeeperkcup', // Add the link to the client's website
   },
   {
-    heading: 'Intuitive Design',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor neque sed imperdiet nibh lectus feugiat nunc sem.',
     avatarSrc:
-      'https://images.unsplash.com/photo-1586297135537-94bc9ba060aa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80',
-    name: 'Sabrina Guiyab',
-    title: 'President at Culinary Arts Club HG',
+      'https://res.cloudinary.com/dlgyqy69b/image/upload/v1723706403/OFFICIAL_BROWN_VER_LOGO_afziqv.png',
+    name: 'Culinary Arts Club HG',
+    link: 'https://www.instagram.com/culinaryartsclub.hu/', // Add the link to the client's website
   },
 ]
 
-export default function WithSpeechBubbles() {
+export default function ClientsGrid() {
   return (
-    <Box  fontFamily={'inter'}  margin={'2rem'} bg={'linear-gradient(90deg, #e8e8e8, #f2e3da)'}>
-      <Container maxW={'7xl'} py={16} as={Stack} spacing={12}>
+    <Box
+      fontFamily={'inter'}
+      margin={'2rem'}
+      bg={'linear-gradient(90deg, #e8e8e8, #f2e3da)'}
+      py={16}
+    >
+      <Container maxW={'7xl'} as={Stack} spacing={12}>
         <Stack spacing={0} align={'center'}>
-          <Heading fontFamily={'inter'} >Testimonials</Heading>
-          <Text>Our clients who tried our products.</Text>
+          <Heading fontFamily={'inter'}>Our Clients</Heading>
+          <Text>First hand experience of our products.</Text>
         </Stack>
-        <Stack
+        <Flex
           direction={{ base: 'column', md: 'row' }}
-          spacing={{ base: 10, md: 4, lg: 10 }}
+          align={'center'}
+          justify={'center'}
+          wrap={'wrap'}
+          gap={10}
         >
-          {testimonialsData.map((testimonial, index) => (
-            <Testimonial key={index}>
-              <TestimonialContent>
-                <TestimonialHeading>{testimonial.heading}</TestimonialHeading>
-                <TestimonialText>{testimonial.text}</TestimonialText>
-              </TestimonialContent>
-              <TestimonialAvatar
-                src={testimonial.avatarSrc}
-                name={testimonial.name}
-                title={testimonial.title}
-              />
-            </Testimonial>
+          {clientsData.map((client, index) => (
+            <Link key={index} href={client.link} isExternal>
+              <Stack align={'center'} spacing={4}>
+                <Image
+                  boxSize={'100px'}
+                  objectFit={'contain'}
+                  src={client.avatarSrc}
+                  alt={`${client.name} logo`}
+                />
+                <Text fontWeight={600}>{client.name}</Text>
+              </Stack>
+            </Link>
           ))}
-        </Stack>
+        </Flex>
       </Container>
     </Box>
   )
