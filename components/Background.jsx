@@ -25,7 +25,7 @@ const Overlay = () => {
   return (
     <Flex
       w={'75%'}
-      h={'100vh'}
+      h={'60vh'}
       position="absolute"
       margin={10}
       align="center"
@@ -41,16 +41,17 @@ const Overlay = () => {
           <Text
             color={'#1a202c'}
             outlineColor={'black'}
-            fontWeight={900}
-            lineHeight={1.2}
+            letterSpacing={-5.2}
+            fontWeight={800}
+            lineHeight={1}
             fontFamily={'inter'}
             fontSize={useBreakpointValue({ base: '5xl', md: '7xl' })}
           >
-           Elevating the mundane with better foods
+           Elevating the Mundane with Better Foods
           </Text>
           <Text
             color={'#1a202c'}
-            fontWeight={500}
+            fontWeight={400}
             lineHeight={1.2}
             fontSize={useBreakpointValue({ base: '2xl', md: '3xl' })}
           >
