@@ -41,7 +41,7 @@ const Overlay = () => {
           <Text
             color={'#1a202c'}
             outlineColor={'black'}
-            letterSpacing={-5.2}
+            letterSpacing={-1.2}
             fontWeight={800}
             lineHeight={1}
             fontFamily={'inter'}
