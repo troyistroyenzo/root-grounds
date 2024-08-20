@@ -53,6 +53,7 @@ const Overlay = () => {
             color={'#1a202c'}
             fontWeight={400}
             lineHeight={1.2}
+            letterSpacing={-1.2}
             fontSize={useBreakpointValue({ base: '2xl', md: '3xl' })}
           >
             We are a one-stop-shop for curated food picks.
@@ -63,8 +64,8 @@ const Overlay = () => {
                 color={'#FFFFFF'}
                 bg={'#FF5757'}
                 fontWeight={650}
-                fontSize={'3xl'}
-                padding={'2rem'}
+                fontSize={'1xl'}
+                padding={'1rem'}
                 sx={{
                   _hover: {
                     bg: 'linear-gradient(78deg, rgba(159, 122, 234, 0.7) 0%, rgba(255, 97, 218, 0.7) 50%)',
@@ -115,7 +116,7 @@ export default function App() {
         dpr={[1, perfSucks ? 1.5 : 2]}
         camera={{ position: [100, 100, 300], fov: 50 }}>
         <PerformanceMonitor onDecline={() => degrade(false)} />
-        <color attach="background" args={['#000000']} />
+        <color attach="#FF5757" args={['#000000']} />
         <Suspense fallback={null}>
           <group position={[0, -0.5, 0]} rotation={[0, -0.75, 0]}>
             <Scene />
